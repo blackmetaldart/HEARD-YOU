@@ -1,4 +1,8 @@
 package com.example.musicapi.repository;
 
-public interface SongRepository {
+import com.example.musicapi.model.Song;
+import org.springframework.data.repository.CrudRepository;
+
+public interface SongRepository extends CrudRepository<Song, Long> {
+
 }
