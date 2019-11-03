@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="users-api" />
+        <module name="music-api" />
         <module name="eureka-server" />
         <module name="zuul-gateway" />
       </profile>
@@ -21,6 +22,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="-parameters" />
+      <module name="music-api" options="-parameters" />
       <module name="users-api" options="-parameters" />
       <module name="zuul-gateway" options="-parameters" />
     </option>
