@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-    //
+    //COLUMNS : USERNAME / FIRSTNAME / LASTNAME / EMAIL
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -25,9 +25,9 @@ public class User {
 
     public User() {}
 
-    public User(long id, String userName, String firstName, String lastName) {
+    public User(long id, String username, String firstName, String lastName) {
         this.id = id;
-        this.username = userName;
+        this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -59,17 +59,6 @@ public class User {
     }
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        s.append("User{")
-                .append("id:").append(id)
-                .append(",userName:").append(username)
-                .append(",firstName:").append(firstName)
-                .append(",lastName:").append(lastName)
-                .append("}");
-        return s.toString();
     }
 
     public String getEmail() {return email;}
