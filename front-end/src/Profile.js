@@ -11,4 +11,4 @@ class Profile extends Component {
     }
 }
 
-export default Header;
+export default Profile;
