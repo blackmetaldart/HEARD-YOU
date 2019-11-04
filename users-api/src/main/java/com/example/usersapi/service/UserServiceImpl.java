@@ -62,8 +62,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public String createUser(User newUser) {
-        UserRole userRole = userRoleService.getRole(newUser.getUserRole().getName());
-        newUser.setUserRole(userRole);
+        newUser.setRole("DBA");
         newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
         if(userRepository.save(newUser) != null){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
@@ -83,14 +82,4 @@ public class UserServiceImpl implements UserService{
         }
         return null;
     }
-
-    //THIS DELETES A USER BY THE USER ID
-    @Override
-    public HttpStatus deleteById(Long userId){
-        userRepository.deleteById(userId);
-        return HttpStatus.OK;
-    }
-
-    p
-
 }

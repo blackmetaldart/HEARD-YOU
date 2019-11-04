@@ -11,8 +11,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "user_name")
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "first_name")
     private String firstName;
@@ -69,4 +72,7 @@ public class User {
 
     public String getRole() {return role;}
     public void setRole(String role) {this.role = role;}
+
+    public String getPassword() {return password;}
+    public void setPassword(String password) {this.password = password;}
 }
