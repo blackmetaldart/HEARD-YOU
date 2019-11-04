@@ -21,23 +21,20 @@ class App extends Component {
         <Header />
 
         <Router>
-                <div>
-                  <nav>
-                    <Link to="/">Go to Home Page</Link>{' '}
-                    <Link to="/main">Back to the Main Page</Link>{' '}
-                    <Link to="/songs">Top Songs</Link>
-                    <Link to="/posts">Top Posts</Link>
-                  </nav>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/main" component={Main} />
-                  <Route path="/songs" component={Songs} />
-                  <Route path="/posts" component={Posts} />
-                </div>
-              </Router>
+          <div>
+            <nav>
+              <Link to="/">Go to Home Page</Link>{' '}
+              <Link to="/main">Back to the Main Page</Link>{' '}
+              <Link to="/songs">Top Songs</Link>
+              <Link to="/posts">Top Posts</Link>
+            </nav>
+            <Route exact path="/" component={Home} />
+            <Route path="/main" component={Main} />
+            <Route path="/songs" component={Songs} />
+            <Route path="/posts" component={Posts} />
+          </div>
+        </Router>
 
-
-
-        <Nav />
         <Main />
         <Footer />
         </div>
