@@ -23,6 +23,9 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "role")
+    private String role;
+
     public User() {}
 
     public User(long id, String username, String firstName, String lastName) {
@@ -40,10 +43,10 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
+    public String getUsername() {
         return username;
     }
-    public void setUserName(String userName) {
+    public void setUsername(String userName) {
         this.username = userName;
     }
 
@@ -63,4 +66,7 @@ public class User {
 
     public String getEmail() {return email;}
     public void setEmail(String email) {this.email = email;}
+
+    public String getRole() {return role;}
+    public void setRole(String role) {this.role = role;}
 }
