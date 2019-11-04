@@ -1,5 +1,6 @@
 package com.example.postsapi.service;
 
+import com.example.postsapi.config.ExceptionHandler;
 import com.example.postsapi.model.Post;
 import com.example.postsapi.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class PostServiceImpl implements PostService{
     }
 
     //DELETES A POST FROM THE POST REPOSITORY
-    public ResponseEntity<Object> deletePostByPostId(Long postId) throws ExceptionHandler{
+    public ResponseEntity<Object> deletePostByPostId(Long postId) throws ExceptionHandler {
         return postRepository.findById(postId).map (post -> {
             postRepository.delete(post);
             return ResponseEntity.ok().build();
