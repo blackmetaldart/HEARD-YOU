@@ -12,7 +12,7 @@ public class User {
     private long id;
 
     @Column(name = "user_name")
-    private String userName;
+    private String username;
 
     @Column(name = "first_name")
     private String firstName;
@@ -27,7 +27,7 @@ public class User {
 
     public User(long id, String userName, String firstName, String lastName) {
         this.id = id;
-        this.userName = userName;
+        this.username = userName;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -41,10 +41,10 @@ public class User {
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.username = userName;
     }
 
     public String getFirstName() {
@@ -65,7 +65,7 @@ public class User {
         StringBuilder s = new StringBuilder();
         s.append("User{")
                 .append("id:").append(id)
-                .append(",userName:").append(userName)
+                .append(",userName:").append(username)
                 .append(",firstName:").append(firstName)
                 .append(",lastName:").append(lastName)
                 .append("}");
