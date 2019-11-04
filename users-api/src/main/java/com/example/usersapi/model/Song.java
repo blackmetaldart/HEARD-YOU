@@ -1,4 +1,4 @@
-package com.example.musicapi.model;
+package com.example.usersapi.model;
 
 import javax.persistence.*;
 import java.util.List;

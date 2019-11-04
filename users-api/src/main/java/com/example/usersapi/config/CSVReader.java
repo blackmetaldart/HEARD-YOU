@@ -1,6 +1,7 @@
 package com.example.usersapi.config;
 
-import com.example.musicapi.model.Song;
+import com.example.usersapi.model.Song;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
