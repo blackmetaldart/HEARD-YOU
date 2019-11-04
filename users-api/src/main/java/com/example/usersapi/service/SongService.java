@@ -1,6 +1,6 @@
-package com.example.musicapi.service;
+package com.example.usersapi.service;
 
-import com.example.musicapi.model.Song;
+import com.example.usersapi.model.Song;
 
 import java.util.List;
 

@@ -1,7 +1,8 @@
-package com.example.musicapi.controller;
+package com.example.usersapi.controller;
 
-import com.example.musicapi.model.Song;
-import com.example.musicapi.service.SongService;
+
+import com.example.usersapi.model.Song;
+import com.example.usersapi.service.SongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
