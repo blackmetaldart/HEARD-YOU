@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService{
     private List<GrantedAuthority> getGrantedAuthorities(User user){
         List<GrantedAuthority> authorities = new ArrayList<>();
 
-        authorities.add(new SimpleGrantedAuthority(user.getUserRole().getName()));
+        authorities.add(new SimpleGrantedAuthority(user.getRole()));
 
         return authorities;
     }
@@ -80,6 +80,11 @@ public class UserServiceImpl implements UserService{
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
             return jwtUtil.generateToken(userDetails);
         }
+        return null;
+    }
+
+    @Override
+    public HttpStatus searchByEmail (String email) {
         return null;
     }
 }
