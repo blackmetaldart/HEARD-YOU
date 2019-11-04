@@ -1,8 +1,9 @@
 package com.example.usersapi.service;
 
-import com.example.postsapi.config.ExceptionHandler;
-import com.example.postsapi.model.Post;
-import com.example.postsapi.repository.PostRepository;
+
+import com.example.usersapi.config.ExceptionHandler;
+import com.example.usersapi.model.Post;
+import com.example.usersapi.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
