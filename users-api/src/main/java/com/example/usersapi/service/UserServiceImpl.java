@@ -20,11 +20,6 @@ public class UserServiceImpl implements UserService{
     private UserRepository userRepository;
 
     @Override
-    public Iterable<User> getAll() {
-        return userRepository.findAll();
-    }
-
-    @Override
     public User searchById(long id) {
         return userRepository.findById(id).get();
     }
@@ -33,12 +28,6 @@ public class UserServiceImpl implements UserService{
     @Override
     public HttpStatus deleteUser(long id) {
         userRepository.deleteById(id);
-        return HttpStatus.OK;
-    }
-
-    @Override
-    public HttpStatus createUser(User user) {
-        userRepository.save(user);
         return HttpStatus.OK;
     }
 
@@ -101,5 +90,7 @@ public class UserServiceImpl implements UserService{
         userRepository.deleteById(userId);
         return HttpStatus.OK;
     }
+
+    p
 
 }
