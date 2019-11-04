@@ -1,8 +1,7 @@
 package com.example.postsapi.controller;
 
-
-import com.example.usersapi.model.Post;
-import com.example.usersapi.service.PostService;
+import com.example.postsapi.model.Post;
+import com.example.postsapi.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

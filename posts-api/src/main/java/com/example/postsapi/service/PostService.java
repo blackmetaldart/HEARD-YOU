@@ -1,6 +1,6 @@
 package com.example.postsapi.service;
 
-import com.example.usersapi.model.Post;
+import com.example.postsapi.model.Post;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

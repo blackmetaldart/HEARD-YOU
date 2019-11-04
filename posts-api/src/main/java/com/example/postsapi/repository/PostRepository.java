@@ -1,6 +1,6 @@
 package com.example.postsapi.repository;
 
-import com.example.usersapi.model.Post;
+import com.example.postsapi.model.Post;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
