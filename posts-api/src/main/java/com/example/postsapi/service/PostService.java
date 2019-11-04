@@ -1,4 +1,4 @@
-package com.example.usersapi.service;
+package com.example.postsapi.service;
 
 import com.example.usersapi.model.Post;
 import org.springframework.http.ResponseEntity;

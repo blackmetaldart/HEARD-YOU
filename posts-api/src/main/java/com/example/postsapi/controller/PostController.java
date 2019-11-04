@@ -1,4 +1,4 @@
-package com.example.usersapi.controller;
+package com.example.postsapi.controller;
 
 
 import com.example.usersapi.model.Post;

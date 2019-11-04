@@ -1,8 +1,8 @@
-package com.example.usersapi.service;
+package com.example.musicapi.service;
 
-import com.example.usersapi.config.CSVReader;
-import com.example.usersapi.model.Song;
-import com.example.usersapi.repository.SongRepository;
+import com.example.musicapi.config.CSVReader;
+import com.example.musicapi.model.Song;
+import com.example.musicapi.repository.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
