@@ -5,9 +5,9 @@ class Songs extends Component {
       return (
         <div className="Songs">
         <h2> Top Songs </h2>
-        <p> These are the top songs for the week! </p> 
+        <p> These are the top songs for the week! </p>
         </div>
       );
     }
 }
-export default Home;
+export default Songs;
