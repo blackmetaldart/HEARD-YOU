@@ -1,4 +1,4 @@
-package com.example.postsapi.model;
+package com.example.usersapi.model;
 
 import javax.persistence.*;
 

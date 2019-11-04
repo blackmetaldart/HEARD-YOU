@@ -1,4 +1,4 @@
-package com.example.postsapi.service;
+package com.example.usersapi.service;
 
 import com.example.postsapi.config.ExceptionHandler;
 import com.example.postsapi.model.Post;

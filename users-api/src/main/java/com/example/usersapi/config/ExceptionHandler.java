@@ -1,4 +1,4 @@
-package com.example.postsapi.config;
+package com.example.usersapi.config;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
