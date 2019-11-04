@@ -4,6 +4,13 @@ import Nav from './Nav';
 import Main from './Main';
 import Footer from './Footer';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+
+
 import './App.css';
 
 class App extends Component {
