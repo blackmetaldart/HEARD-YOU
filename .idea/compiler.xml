@@ -14,12 +14,13 @@
         <sourceOutputDir name="../generated-sources/annotations" />
         <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="maven-archiver (3)" />
+        <module name="maven-archiver" />
         <module name="maven-archiver (2)" />
+        <module name="maven-archiver (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="maven-archiver (1)" target="1.5" />
+      <module name="maven-archiver (3)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
