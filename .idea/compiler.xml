@@ -7,16 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="users-api" />
+        <module name="posts-api" />
         <module name="music-api" />
         <module name="zuul-gateway" />
-        <module name="posts-api" />
-        <module name="demo" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="demo" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="music-api" options="-parameters" />
       <module name="posts-api" options="-parameters" />
       <module name="users-api" options="-parameters" />
