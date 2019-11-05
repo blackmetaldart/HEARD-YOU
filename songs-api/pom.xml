@@ -11,8 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>songs-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>songs-api</name>
+	<description>The Songs API for the application</description>
 
 	<properties>
 		<java.version>1.8</java.version>
