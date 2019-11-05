@@ -1,4 +1,4 @@
-package com.example.postsapi;
+package com.example.songsapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class PostsApiApplication {
+public class SongsApiApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PostsApiApplication.class, args);
+		SpringApplication.run(SongsApiApplication.class, args);
 	}
-	@RequestMapping(value = "/posts")
+	@RequestMapping(value = "/songs")
 	public String home() {
 		return "Eureka Client : Songs application";
 	}
