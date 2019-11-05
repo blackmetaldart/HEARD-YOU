@@ -15,6 +15,6 @@ public class PostsApiApplication {
 	}
 	@RequestMapping(value = "/posts")
 	public String home() {
-		return "Eureka Client : Songs application";
+		return "Eureka Client : Posts application";
 	}
 }
