@@ -7,20 +7,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="users-api" />
-        <module name="zuul-gateway" />
         <module name="eureka-server" />
+        <module name="zuul-gateway" />
+      </profile>
+      <profile name="Annotation profile for Unknown" enabled="true">
+        <sourceOutputDir name="../generated-sources/annotations" />
+        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven-archiver (3)" />
+        <module name="maven-archiver (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="music-api" target="1.8" />
-      <module name="posts-api" target="1.8" />
+      <module name="maven-archiver (1)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-server" options="-parameters" />
-      <module name="music-api" options="-parameters" />
-      <module name="posts-api" options="-parameters" />
       <module name="users-api" options="-parameters" />
       <module name="zuul-gateway" options="-parameters" />
     </option>
