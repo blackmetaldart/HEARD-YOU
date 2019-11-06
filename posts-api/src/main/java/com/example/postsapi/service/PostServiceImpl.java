@@ -33,8 +33,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public String findPostBySongId() {
-        return null;
+    public String findPostBySongId(Long songId) {
+        return postRepository.getPostsBySongId(songId);
     }
 
     @Override
