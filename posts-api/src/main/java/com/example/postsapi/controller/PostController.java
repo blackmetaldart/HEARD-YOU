@@ -1,20 +1,30 @@
 package com.example.postsapi.controller;
 
+import com.example.postsapi.model.Post;
+import com.example.postsapi.service.PostService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 public class PostController {
 
-    @PostMapping("/makepost")
-    public String createPost() {return "Hello World!! You just created a post!";}
+    @Autowired
+    PostService postService;
 
-    @GetMapping("/list")
-    public String listPosts() {return "Hello World!! You just listed all your posts!"; }
+    @PostMapping("{username}/makepost")
+    public Post createPost(@Valid @RequestBody Post post, @Valid @PathVariable String username){
+        return postService.createPost(username, post);
+    }
 
-    @PutMapping("/edit")
-    public String updatePosts() {return "Hello World!! You just edited your posts!";}
+    @GetMapping("{songId}/posts")
+    public List<Post> getPostsBySongId(@PathVariable Long songId) {return postService.findPostBySongId(songId);}
 
-    @DeleteMapping("/delete")
-    public String deletePosts() {return "Hello World!! You just deleted your post!";}
+    @DeleteMapping ("/post/{postId}")
+    public ResponseEntity<Object> deletePostByPostId(@PathVariable Long postId) { return postService.deletePostByPostId(postId);
+    }
 
 }
