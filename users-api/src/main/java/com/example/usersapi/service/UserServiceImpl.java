@@ -5,11 +5,14 @@ import com.example.usersapi.model.User;
 import com.example.usersapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserServiceImpl implements UserService{
 
@@ -38,6 +41,11 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public User getUser(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    @Override
     public String login(User user){
         User newUser = userRepository.findByUsername(user.getUsername());
         if(newUser != null && bCryptPasswordEncoder.matches(user.getPassword(), newUser.getPassword())){
@@ -63,5 +71,12 @@ public class UserServiceImpl implements UserService{
         return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
                 true, true, true, true, new ArrayList<>());
     }
+
+//    //GRANTS A USER AUTHORITY
+//    private List<GrantedAuthority> getGrantedAuthorities(User user){
+//        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+//        authorities.add(new SimpleGrantedAuthority(user.getUsername()));
+//        return authorities;
+//    }
 
 }
