@@ -33,9 +33,10 @@ public class User {
     @Column
     private String password;
 
+    //EMPTY USER CONSTRUCTOR
     public User(){}
 
-    //EMPTY USER CONSTRUCTOR
+    //THE GETTERS AND SETTERS FOR THE USER MODEL DATE
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName;}
 
