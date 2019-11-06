@@ -1,6 +1,7 @@
 package com.example.postsapi.service;
 
 import com.example.postsapi.model.Post;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -9,6 +10,6 @@ public interface PostService {
     List<Post> getPostsByUsername(String username);
     Post findPostByPostId(Long postId);
     String findPostBySongId();
-    String deletePost();
+    ResponseEntity<Object> deletePostByPostId(Long postId);
 
 }
