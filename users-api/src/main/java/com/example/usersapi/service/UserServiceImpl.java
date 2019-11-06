@@ -71,10 +71,10 @@ public class UserServiceImpl implements UserService{
     }
 
     //GRANTS A USER AUTHORITY
-    private List<GrantedAuthority> getGrantedAuthorities(User user){
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-        authorities.add(new SimpleGrantedAuthority(user.getUsername()));
-        return authorities;
-    }
+//    private List<GrantedAuthority> getGrantedAuthorities(User user){
+//        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+//        authorities.add(new SimpleGrantedAuthority(user.getUsername()));
+//        return authorities;
+//    }
 
 }
