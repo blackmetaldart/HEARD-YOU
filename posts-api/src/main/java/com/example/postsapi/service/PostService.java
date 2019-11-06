@@ -9,7 +9,7 @@ public interface PostService {
     Post createPost(String username, Post post);
     List<Post> getPostsByUsername(String username);
     Post findPostByPostId(Long postId);
-    String findPostBySongId();
+    String findPostBySongId(Long songId);
     ResponseEntity<Object> deletePostByPostId(Long postId);
 
 }
