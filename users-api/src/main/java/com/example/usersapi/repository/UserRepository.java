@@ -1,4 +1,7 @@
 package com.example.usersapi.repository;
 
-public interface UserRepository {
+import com.example.usersapi.model.User;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<User, Long> {
 }
