@@ -1,9 +1,21 @@
 package com.example.usersapi.service;
 
+import com.example.usersapi.config.JwtUtil;
 import com.example.usersapi.model.User;
+import com.example.usersapi.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserServiceImpl implements UserService{
+
+    @Autowired
+    JwtUtil jwtUtil;
+
+
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     @Override
     public String createUser(User newUser) {
