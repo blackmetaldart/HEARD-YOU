@@ -2,7 +2,9 @@ package com.example.postsapi.service;
 
 import com.example.postsapi.model.Post;
 import com.example.postsapi.repository.PostRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,7 +37,10 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public String deletePostByPostId() {
-        return null;
+    public ResponseEntity<Object> deletePostByPostId(Long postId){
+        return postRepository.findById(postId).map (post -> {
+            postRepository.delete(post);
+            return ResponseEntity.ok().build();
+        }).orElseThrow(() -> new ExceptionHandler("PostId " + postId + " not found"));
     }
 }
