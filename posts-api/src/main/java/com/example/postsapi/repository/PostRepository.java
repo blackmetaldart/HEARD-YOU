@@ -13,6 +13,7 @@ public interface PostRepository extends CrudRepository<Post, Long> {
     @Query("FROM Post post WHERE post.id = ?1")
     Post getPostById (Long postId);
 
-
+    @Query("FROM Post post WHERE post.songId =?1")
+    List getPostsBySongId (Long songId);
 
 }
