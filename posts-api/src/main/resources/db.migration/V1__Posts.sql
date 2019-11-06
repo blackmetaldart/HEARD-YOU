@@ -1,7 +1,7 @@
 CREATE TABLE Posts (
-  firstName VARCHAR(50),
-  lastName VARCHAR(50),
-  email   VARCHAR(50),
+  id SERIAL UNIQUE,
+  title VARCHAR(50),
+  description VARCHAR(50),
   username VARCHAR(100),
-  password VARCHAR(255)
+  songId INTEGER
 )
