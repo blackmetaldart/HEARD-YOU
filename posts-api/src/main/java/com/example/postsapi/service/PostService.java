@@ -7,7 +7,7 @@ import java.util.List;
 public interface PostService {
     String createPost(String username, Post post);
     List<Post> getPostsByUsername(String username);
-    String findPostByPostId();
+    String findPostByPostId(Long postId);
     String findPostBySongId();
     String deletePost();
 
