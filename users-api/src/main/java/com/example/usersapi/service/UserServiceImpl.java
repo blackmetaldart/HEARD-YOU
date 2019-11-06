@@ -6,7 +6,10 @@ import com.example.usersapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.ArrayList;
 
 public class UserServiceImpl implements UserService{
 
@@ -44,18 +47,21 @@ public class UserServiceImpl implements UserService{
         return null;
     }
 
-    @Override
-    public String createProfile() {
-        return null;
-    }
-
-    @Override
-    public String updateProfile() {
-        return null;
-    }
 
     @Override
     public String logout() {
         return null;
     }
+
+    //FINDS A USER BY THE USERNAME
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = getUser(username);
+
+        if(user==null)
+            throw new UsernameNotFoundException("User null");
+
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
+                true, true, true, true, new ArrayList<>());
+    }
+
 }
