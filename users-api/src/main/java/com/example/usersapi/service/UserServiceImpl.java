@@ -1,5 +1,6 @@
 package com.example.usersapi.service;
 
+import com.example.usersapi.model.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserServiceImpl implements UserService{
@@ -16,7 +17,12 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public String login() {
+    public String login(User user){
+        User newUser = userRepository.findByUsername(user.getUsername());
+        if(newUser != null && bCryptPasswordEncoder.matches(user.getPassword(), newUser.getPassword())){
+            UserDetails userDetails = loadUserByUsername(newUser.getUsername());
+            return jwtUtil.generateToken(userDetails);
+        }
         return null;
     }
 
