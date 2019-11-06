@@ -18,8 +18,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public String findPost() {
-        return null;
+    public Post findPostByPostId(Long postId) {
+        return postRepository.getPostById(postId);
     }
 
     @Override
