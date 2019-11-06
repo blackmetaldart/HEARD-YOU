@@ -1,10 +1,3 @@
-CREATE TABLE Songs (
- id SERIAL UNIQUE,
- title VARCHAR(50),
- songLength INTEGER,
- artist VARCHAR(50)
-);
-
 INSERT INTO Songs (title, songLength, artist) VALUES ('Bad Guy',3,'Billie Eilish');
 INSERT INTO Songs (title, songLength, artist) VALUES ('Old Town Road',2,'Lil Nas X');
 INSERT INTO Songs (title, songLength, artist) VALUES ('Sucker',6,'Jonas Brothers');
