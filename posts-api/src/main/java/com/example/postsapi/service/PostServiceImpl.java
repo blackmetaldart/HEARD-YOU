@@ -1,5 +1,6 @@
 package com.example.postsapi.service;
 
+import com.example.postsapi.config.ExceptionHandler;
 import com.example.postsapi.model.Post;
 import com.example.postsapi.repository.PostRepository;
 
