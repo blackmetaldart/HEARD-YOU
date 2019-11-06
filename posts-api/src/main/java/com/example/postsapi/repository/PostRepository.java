@@ -1,5 +1,8 @@
 package com.example.postsapi.repository;
 
-public class PostRepository extends CrudRepository<Post, Long>{
+import com.example.postsapi.model.Post;
+import org.springframework.data.repository.CrudRepository;
+
+public interface PostRepository extends CrudRepository<Post, Long> {
 
 }
