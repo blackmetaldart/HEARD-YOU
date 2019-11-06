@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   eureka:
     image: maven:3.6.1-jdk-8
@@ -18,6 +17,50 @@ services:
     working_dir: /app
     volumes:
       - ./zuul-gateway:/app
+    depends_on:
+      - eureka
+    command: 'mvn spring-boot:run'
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+  postgresdev:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=runnerdev
+  users-api:
+    image: maven:3.6.1-jdk-8
+    ports:
+      - '8081:8081'
+    working_dir: /app
+    volumes:
+      - ./users-api:/app
+    depends_on:
+      - eureka
+    command: 'mvn spring-boot:run'
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+  songs-api:
+    image: maven:3.6.1-jdk-8
+    ports:
+      - '8082:8082'
+    working_dir: /app
+    volumes:
+      - ./songs-api:/app
+    depends_on:
+      - eureka
+    command: 'mvn spring-boot:run'
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+  posts-api:
+    image: maven:3.6.1-jdk-8
+    ports:
+      - '8083:8083'
+    working_dir: /app
+    volumes:
+      - ./posts-api:/app
     depends_on:
       - eureka
     command: 'mvn spring-boot:run'
