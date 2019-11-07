@@ -3,6 +3,10 @@ import Header from './Header';
 import Nav from './Nav';
 import Main from './Main';
 import Footer from './Footer';
+import Home from './Home';
+import Profile from './Profile';
+import Songs from './Songs';
+import Posts from './Posts';
 
 import {
   BrowserRouter as Router,
