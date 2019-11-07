@@ -24,12 +24,12 @@ class App extends Component {
         <Header />
 
         <Router>
-          <div>
+          <div className="routerNav">
             <nav>
-              <Link to="/">Go to Home Page</Link>{' '}
-              <Link to="/main">Main Page</Link>{' '}
-              <Link to="/profile">User Profile</Link>{' '}
-              <Link to="/songs">Top Songs</Link>{' '}
+              <Link to="/">Home</Link>{'  '}
+              <Link to="/main">Main</Link>{'  '}
+              <Link to="/profile">Profile</Link>{'  '}
+              <Link to="/songs">Top Songs</Link>{'  '}
               <Link to="/posts">Top Posts</Link>
             </nav>
             <Route exact path="/" component={Home} />
