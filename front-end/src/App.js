@@ -27,7 +27,7 @@ class App extends Component {
           <div>
             <nav>
               <Link to="/">Go to Home Page</Link>{' '}
-              <Link to="/main">Back to the Main Page</Link>{' '}
+              <Link to="/main">Main Page</Link>{' '}
               <Link to="/profile">User Profile</Link>{' '}
               <Link to="/songs">Top Songs</Link>{' '}
               <Link to="/posts">Top Posts</Link>
