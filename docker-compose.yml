@@ -38,7 +38,7 @@ services:
     volumes:
       - ./users-api:/app
     depends_on:
-      - eureka
+      - postgresdev
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
@@ -50,7 +50,7 @@ services:
     volumes:
       - ./songs-api:/app
     depends_on:
-      - eureka
+      - users-api
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
@@ -62,7 +62,7 @@ services:
     volumes:
       - ./posts-api:/app
     depends_on:
-      - eureka
+      - users-api
     command: 'mvn spring-boot:run'
     environment:
       - SPRING_PROFILES_ACTIVE=dev
