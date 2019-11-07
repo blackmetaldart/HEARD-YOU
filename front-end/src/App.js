@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import Header from './Header';
-import Nav from './Nav';
+import Header from './components/Header';
 import Main from './Main';
-import Footer from './Footer';
+import Footer from './components/Footer';
 import Home from './Home';
 import Profile from './Profile';
 import Songs from './Songs';
