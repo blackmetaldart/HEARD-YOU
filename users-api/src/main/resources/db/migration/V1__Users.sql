@@ -1,4 +1,4 @@
-CREATE TABLE Users (
+CREATE TABLE User (
   id SERIAL UNIQUE,
   firstName VARCHAR(50),
   lastName VARCHAR(50),
@@ -7,14 +7,14 @@ CREATE TABLE Users (
   password VARCHAR(255)
 );
 
-CREATE TABLE Songs (
+CREATE TABLE Song (
  id SERIAL UNIQUE,
  title VARCHAR(50),
  songLength INTEGER,
  artist VARCHAR(50)
 );
 
-CREATE TABLE Posts (
+CREATE TABLE Post (
   id SERIAL UNIQUE,
   title VARCHAR(50),
   description VARCHAR(50),

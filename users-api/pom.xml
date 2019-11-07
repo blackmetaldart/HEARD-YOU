@@ -102,6 +102,10 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -120,7 +124,7 @@
 					<locations>
 						<location>filesystem:src/main/resources/db/migration/</location>
 					</locations>
-					<url>jdbc:postgresql://postgresdev:5432/runnerdev</url>
+					<url>jdbc:postgresql://localhost:5432/runnerdev</url>
 					<user>postgres</user>
 					<password>password</password>
 				</configuration>

@@ -28,7 +28,7 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=password
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=marksman
       - POSTGRES_DB=runnerdev
   users-api:
     image: maven:3.6.1-jdk-8
