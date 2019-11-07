@@ -118,7 +118,7 @@
 				<configuration>
 					<sqlMigrationSeparator>__</sqlMigrationSeparator>
 					<locations>
-						<location>filesystem:src/main/resources/db/migration</location>
+						<location>filesystem:src/main/resources/db/migration/</location>
 					</locations>
 					<url>jdbc:postgresql://postgresdev:5432/runnerdev</url>
 					<user>postgres</user>
