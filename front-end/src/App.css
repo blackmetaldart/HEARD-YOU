@@ -22,7 +22,7 @@
 }
 
 .routerNav nav {
-  margin : 0 auto;
+  margin : 5vh auto;
   width : 80vw;
   display : flex;
   flex-direction: row;
@@ -30,6 +30,7 @@
 }
 
 .routerNav nav a {
-
+  color : black;
+  text-decoration: none;
 
 }
