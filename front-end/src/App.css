@@ -21,10 +21,14 @@
   color: #09d3ac;
 }
 
-.routerNav nav a {
+.routerNav nav {
   width : 80vw;
   display : flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.routerNav nav a {
+
 
 }
