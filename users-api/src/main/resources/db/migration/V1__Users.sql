@@ -1,4 +1,4 @@
-CREATE TABLE User (
+CREATE TABLE Users (
   id SERIAL UNIQUE,
   firstName VARCHAR(50),
   lastName VARCHAR(50),
