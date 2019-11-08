@@ -23,6 +23,8 @@
 
 .routerNav nav a {
   width : 80vw;
+  display : flex;
+  flex-direction: row;
   justify-content: space-around;
 
 }
