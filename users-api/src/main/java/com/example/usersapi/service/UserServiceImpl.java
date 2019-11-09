@@ -30,7 +30,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String createUser(User newUser) {
+        newUser.setUserRole("DBA");
 
+        if(userRepository.save(newUser) != null){
+            UserDetails userDetails = loadUserByUsername(newUser.getUsername());
+            return jwtUtil.generateToken(userDetails);
+        }
         return null;
     }
 
