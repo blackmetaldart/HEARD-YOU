@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public String createUser(User newUser) {
         newUser.setUserRole("DBA");
+        newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
 
         if(userRepository.save(newUser) != null){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
@@ -41,8 +42,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String login(User user){
-        if(userRepository.login(user.getUsername(), user.getPassword()) != null){
-            UserDetails userDetails = loadUserByUsername(user.getUsername());
+        User newUser = userRepository.findByUsername(user.getUsername());
+
+        if(newUser != null && bCryptPasswordEncoder.matches(user.getPassword(), newUser.getPassword())){
+            UserDetails userDetails = loadUserByUsername(newUser.getUsername());
             return jwtUtil.generateToken(userDetails);
         }
         return null;
