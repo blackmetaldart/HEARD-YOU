@@ -16,7 +16,6 @@ public class UserController {
     //ENDPOINT THAT ALLOWS A USER TO SIGN UP / REFER TO USER SERVICE
     @PostMapping("/signup")
     public ResponseEntity<?> createUser(@RequestBody User newUser) {
-        //return userService.createUser(newUser);
         return ResponseEntity.ok(new JwtResponse(userService.createUser(newUser)));
     }
 
