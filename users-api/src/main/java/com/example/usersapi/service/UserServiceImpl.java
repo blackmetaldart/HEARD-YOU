@@ -1,5 +1,6 @@
 package com.example.usersapi.service;
 
+import com.example.usersapi.config.JwtUtil;
 import com.example.usersapi.model.User;
 import com.example.usersapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
     @Autowired
+    JwtUtil jwtUtil;
+
+    @Autowired
     @Qualifier("encoder")
     PasswordEncoder bCryptPasswordEncoder;
 
@@ -32,7 +36,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String login(User user){
-
+        if(userRepository.login(user.getUsername(), user.getPassword()) != null){
+            UserDetails userDetails = loadUserByUsername(user.getUsername());
+            return jwtUtil.generateToken(userDetails);
+        }
         return null;
     }
 
