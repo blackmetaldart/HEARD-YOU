@@ -33,6 +33,9 @@ public class User {
     @Column
     private String password;
 
+    @Column
+    private String userRole;
+
     //EMPTY USER CONSTRUCTOR
     public User(){}
 
@@ -52,4 +55,6 @@ public class User {
     public String getPassword() {return password;}
     public void setPassword(String password) {this.password = password;}
 
+    public String getUserRole() {return userRole;}
+    public void setUserRole(String userRole) {this.userRole = userRole;}
 }
