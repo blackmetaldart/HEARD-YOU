@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
         newUser.setUserRole("DBA");
         newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
 
-        if(userRepository.findByUsername(newUser.getUsername()) != null){
+        if(userRepository.save(newUser) != null){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
             return jwtUtil.generateToken(userDetails);
         }
