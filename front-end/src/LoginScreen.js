@@ -15,8 +15,8 @@ class LoginScreen extends Component {
             <Router>
               <div className="registerNav">
                 <nav>
-                  <Link to="/register">Register</Register>{'  '}
-                  <Link to="/login">Log In</Login>{'  '}
+                  <Link to="/register">Register</Link>{'  '}
+                  <Link to="/login">Log In</Link>{'  '}
                 </nav>
                 <Route exact path="/register" component={Register} />
                 <Route path="/login" component={Login} />
