@@ -25,13 +25,14 @@ componentDidMount() {
         localApiError : false
       })
     })
+  }
 
   render(){
       return (
         <div className="SongsList">
 
         </div>
-      )
+      );
     }
 }
 
