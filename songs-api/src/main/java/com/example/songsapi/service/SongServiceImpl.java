@@ -6,8 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SongServiceImpl implements SongService {
-    @Autowired
-    SongService songService;
+
 
     @Override
     public Iterable<Song> listSongs() {
