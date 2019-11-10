@@ -44,4 +44,7 @@ public class PostServiceImpl implements PostService {
             return ResponseEntity.ok().build();
         }).orElseThrow(() -> new ExceptionHandler("PostId " + postId + " not found"));
     }
+
+    @Override
+    public Iterable<Post> findAllPosts(){return postRepository.findAll();}
 }

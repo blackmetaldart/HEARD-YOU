@@ -27,4 +27,9 @@ public class PostController {
     public ResponseEntity<Object> deletePostByPostId(@PathVariable Long postId) { return postService.deletePostByPostId(postId);
     }
 
+    @GetMapping("/list")
+    public Iterable<Post> listPosts(){
+        return postService.findAllPosts();
+    }
+
 }
