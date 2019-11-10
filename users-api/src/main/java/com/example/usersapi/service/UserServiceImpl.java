@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     JwtUtil jwtUtil;
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepositoryWire;
 
     @Autowired
     @Qualifier("encoder")
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
         newUser.setUserRole("DBA");
         newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
 
-        if(userRepository.findByUsername(newUser.getUsername()) != null){
+        if(userRepositoryWire.findByUsername(newUser.getUsername()) != null){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
             return jwtUtil.generateToken(userDetails);
         }
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String login(User user){
-        User newUser = userRepository.findByUsername(user.getUsername());
+        User newUser = userRepositoryWire.findByUsername(user.getUsername());
 
         if(newUser != null && bCryptPasswordEncoder.matches(user.getPassword(), newUser.getPassword())){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
         User user = getUser(username);
 
         if(user==null)
-            throw new UsernameNotFoundException("User null");
+            throw new UsernameNotFoundException("User null ");
 
         return new org.springframework.security.core.userdetails.User(user.getUsername(), bCryptPasswordEncoder.encode(user.getPassword()),
                 true, true, true, true, new ArrayList<>());
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUser(String username) {
-        return userRepository.findByUsername(username);
+        return userRepositoryWire.findByUsername(username);
     }
 
     @Override
