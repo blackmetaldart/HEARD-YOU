@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     JwtUtil jwtUtil;
 
     @Autowired
-    UserRepository userRepositoryWire;
+    UserRepository userRepository;
 
     @Autowired
     @Qualifier("encoder")
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
         newUser.setUserRole("DBA");
         newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
 
-        if(userRepositoryWire.findByUsername(newUser.getUsername()) != null){
+        if(userRepository.findByUsername(newUser.getUsername()) != null){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
             return jwtUtil.generateToken(userDetails);
         }
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String login(User user){
-        User newUser = userRepositoryWire.findByUsername(user.getUsername());
+        User newUser = userRepository.findByUsername(user.getUsername());
 
         if(newUser != null && bCryptPasswordEncoder.matches(user.getPassword(), newUser.getPassword())){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUser(String username) {
-        return userRepositoryWire.findByUsername(username);
+        return userRepository.findByUsername(username);
     }
 
     @Override
