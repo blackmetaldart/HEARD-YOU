@@ -12,6 +12,17 @@ class LoginScreen extends Component {
   render(){
       return (
         <div className="LoginScreen">
+
+        <Router>
+          <div className="registerNav">
+            <nav>
+              <Link to="/register">Register</Register>{'  '}
+              <Link to="/login">Log In</Login>{'  '}
+            </nav>
+            <Route exact path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+          </div>
+        </Router>
           <h2> Home Page </h2>
 
           <h3> Register Here <h3>
