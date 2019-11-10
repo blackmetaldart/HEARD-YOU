@@ -30,7 +30,14 @@ componentDidMount() {
   render(){
       return (
         <div className="SongsList">
-
+        {this.state.songs ? (this.state.songs.map((song, key) => {
+        return (
+        <div className="localSongDiv">
+          <Song key={key} songProp={song}/>
+        </div>
+        )})
+      ) : ''
+      }
         </div>
       );
     }
