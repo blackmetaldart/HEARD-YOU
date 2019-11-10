@@ -30,7 +30,7 @@ class App extends Component {
               <Link to="/main">Main</Link>{'  '}
               <Link to="/profile">Profile</Link>{'  '}
               <Link to="/songs">Top Songs</Link>{'  '}
-              <Link to="/posts">Top Posts</Link>
+              <Link to="/posts">Posts</Link>
             </nav>
             <Route exact path="/" component={Home} />
             <Route path="/main" component={Main} />
