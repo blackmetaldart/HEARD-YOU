@@ -40,6 +40,10 @@ public class User {
     public User(){}
 
     //THE GETTERS AND SETTERS FOR THE USER MODEL DATE
+
+    public Long getId() {return id;}
+    public void setId(Long id) {this.id = id;}
+
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName;}
 
