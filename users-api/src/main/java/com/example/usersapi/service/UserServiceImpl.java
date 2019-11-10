@@ -18,10 +18,10 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserRepository userRepository;
+    JwtUtil jwtUtil;
 
     @Autowired
-    JwtUtil jwtUtil;
+    private UserRepository userRepository;
 
     @Autowired
     @Qualifier("encoder")
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
         newUser.setUserRole("DBA");
         newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
 
-        if(userRepository.save(newUser) != null){
+        if(userRepository.findByUsername(newUser.getUsername()) != null){
             UserDetails userDetails = loadUserByUsername(newUser.getUsername());
             return jwtUtil.generateToken(userDetails);
         }
@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService {
     }
 
     private List<GrantedAuthority> getGrantedAuthorities(User user){
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+        List<GrantedAuthority> authorities = new ArrayList<>();
 
         authorities.add(new SimpleGrantedAuthority("DBA"));
 
