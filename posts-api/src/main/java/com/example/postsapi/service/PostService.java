@@ -11,5 +11,6 @@ public interface PostService {
     Post findPostByPostId(Long postId);
     List<Post> findPostBySongId(Long songId);
     ResponseEntity<Object> deletePostByPostId(Long postId);
+    Iterable<Post> findAllPosts();
 
 }
