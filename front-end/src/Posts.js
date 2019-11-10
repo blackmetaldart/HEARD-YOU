@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './Posts';
 import Post from './components/Post';
 
-
 class Posts extends Component {
   constructor(props) {
   super(props);
