@@ -4,8 +4,8 @@ class Post extends Component {
   render(){
     return (
       <div>
-        <h3>Post : {this.props.postProp.title} [{this.props.postProp.songLength} mins]</h3>
-        <h4>{this.props.postProp.artist[0]}</h4>
+        <h3>Post : {this.props.postProp.username} [{this.props.postProp.title} mins]</h3>
+        <h4>{this.props.postProp.description}</h4>
       </div>
       )
   }
