@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 
 class Login extends Component {
+
+  constructor(props) {
+    super(props);
+
+  }
   render(){
       return (
         <div className="login">
@@ -14,7 +19,7 @@ class Login extends Component {
                 PASSWORD:
                 <input type="text" name="PASSWORD" />
               </label>
-              <input type="submit" value="SUBMIT" />
+              <input onClick={() => login()} type="submit" value="SUBMIT" />
             </form>
         </div>
       );
