@@ -8,10 +8,10 @@ class Register extends Component {
   }
 
   register = (username, password) => {
-    fetch()
+    fetch("localhost://8081/signup")
     .then((response) => ())
     .then((response) => ())
-    .catch((response) => ())
+    .catch((error) => ())
   }
 
   render(){

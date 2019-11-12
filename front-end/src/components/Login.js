@@ -9,10 +9,10 @@ class Login extends Component {
   }
 
   login = (username, password) => {
-    fetch()
+    fetch("localhost://8081/login", {})
     .then((response) => ())
     .then((response) => ())
-    .catch((response) => ())
+    .catch((error) => ())
   }
 
   render(){
