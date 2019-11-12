@@ -4,7 +4,6 @@ class Song extends Component {
   constructor (props){
     super(props);
 
-
   }
 
 makePost = (post) => {
@@ -23,7 +22,7 @@ makePost = (post) => {
   .then((response) => ())
   .catch((error) => ())
 
-  {/*MAKE SUER THAT AFTER REGISTRATION  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
+  {/*MAKE SURE THAT AFTER REGISTRATION  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
 }
 
   render(){
