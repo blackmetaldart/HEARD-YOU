@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 
 class Register extends Component {
+
+  constructor(props){
+    super(props);
+  }
+
   render(){
       return (
         <div className="register">
@@ -14,7 +19,7 @@ class Register extends Component {
                 PASSWORD:
                 <input type="text" name="PASSWORD" />
               </label>
-              <input type="submit" value="SUBMIT" />
+              <input onClick={() => register()} type="submit" value="SUBMIT" />
             </form>
         </div>
       );
