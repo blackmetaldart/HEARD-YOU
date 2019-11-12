@@ -4,6 +4,7 @@ class Register extends Component {
 
   constructor(props){
     super(props);
+    this.register = this.register.bind(this);
   }
 
   render(){
