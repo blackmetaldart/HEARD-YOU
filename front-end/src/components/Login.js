@@ -22,6 +22,8 @@ class Login extends Component {
     .then((response) => ())
     .then((response) => ())
     .catch((error) => ())
+
+    {/*MAKE SUER THAT AFTER LOG IN  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
   }
 
   render(){

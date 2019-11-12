@@ -21,6 +21,8 @@ class Register extends Component {
     .then((response) => ({return response.json()}))
     .then((response) => ())
     .catch((error) => ())
+
+    {/*MAKE SUER THAT AFTER REGISTRATION  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
   }
 
   render(){
