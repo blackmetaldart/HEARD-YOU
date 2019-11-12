@@ -7,13 +7,14 @@ class Register extends Component {
     this.register = this.register.bind(this);
   }
 
-  register = (username, password) => {
+  register = (username, password, email) => {
     fetch("localhost://8081/signup", {
       method : 'POST',
       headers : {
         'Authorization' : 'Bearer ' + localStorage.getItem('user'),
         'Content-Type' : 'application/json'},
         body : JSON.stringify({
+          email : `${email}`,
           username : `${username}`,
           password : `${password}`
         })
@@ -30,6 +31,10 @@ class Register extends Component {
         <div className="register">
           <h3> Register Here </h3>
             <form>
+              <label>
+                EMAIL:
+                <input type="text" name="EMAIL" />
+              </label>
               <label>
                 USERNAME:
                 <input type="text" name="USERNAME" />
