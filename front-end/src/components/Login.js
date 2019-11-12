@@ -7,6 +7,13 @@ class Login extends Component {
     this.login = this.login.bind(this);
 
   }
+
+  login = (username, password) => {
+    fetch()
+    .then((response) => ())
+    .then((response) => ())
+    .catch((response) => ())
+  }
   render(){
       return (
         <div className="login">
