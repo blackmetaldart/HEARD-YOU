@@ -6,8 +6,9 @@ class Song extends Component {
 
   }
 
-makePost = (post) => {
-  fetch("localhost://8083/{username}/makepost", {
+makePost = (post, e) => {
+  e.preventDefault();
+  fetch("localhost://8083/{songId}/makepost", {
     method : 'POST',
     headers : {
       'Authorization' : 'Bearer ' + localStorage.getItem('user'),
@@ -23,6 +24,8 @@ makePost = (post) => {
   .catch((error) => {console.log(error);})
 
   {/*MAKE SURE THAT AFTER REGISTRATION  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
+  {/*MAKE SURE THAT THE PAGE DOES NOT REFRESH*/}
+  {/*MAKE SURE THAT THE PAGE ALERTS THAT A POST WAS MADE*/}
 }
 
   render(){
