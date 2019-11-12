@@ -7,6 +7,13 @@ class Register extends Component {
     this.register = this.register.bind(this);
   }
 
+  register = (username, password) => {
+    fetch()
+    .then((response) => ())
+    .then((response) => ())
+    .catch((response) => ())
+  }
+
   render(){
       return (
         <div className="register">
