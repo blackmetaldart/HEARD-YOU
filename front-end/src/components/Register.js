@@ -8,7 +8,12 @@ class Register extends Component {
   }
 
   register = (username, password) => {
-    fetch("localhost://8081/signup")
+    fetch("localhost://8081/signup", {
+      method : 'POST',
+      headers : {
+        'Authorization' : 'Bearer ' + localStorage.getItem('user'),
+        'Content-Type' : 'application/json'}
+    })
     .then((response) => ())
     .then((response) => ())
     .catch((error) => ())

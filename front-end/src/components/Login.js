@@ -9,7 +9,12 @@ class Login extends Component {
   }
 
   login = (username, password) => {
-    fetch("localhost://8081/login", {})
+    fetch("localhost://8081/login", {
+      method : 'POST',
+      headers : {
+        'Authorization' : 'Bearer ' + localStorage.getItem('user'),
+        'Content-Type' : 'application/json'}
+    })
     .then((response) => ())
     .then((response) => ())
     .catch((error) => ())
