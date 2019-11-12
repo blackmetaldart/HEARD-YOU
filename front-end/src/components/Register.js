@@ -13,11 +13,12 @@ class Register extends Component {
       headers : {
         'Authorization' : 'Bearer ' + localStorage.getItem('user'),
         'Content-Type' : 'application/json'},
-        body : JSON.stringify({username : `${mobile}`,
+        body : JSON.stringify({
+          username : `${username}`,
           password : `${password}`
         })
     })
-    .then((response) => ())
+    .then((response) => ({return response.json()}))
     .then((response) => ())
     .catch((error) => ())
   }
