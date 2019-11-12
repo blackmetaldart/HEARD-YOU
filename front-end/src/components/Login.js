@@ -19,9 +19,9 @@ class Login extends Component {
         password : `${password}`
         })
     })
-    .then((response) => ())
-    .then((response) => ())
-    .catch((error) => ())
+    .then((response) => {return response.json();})
+    .then((response) => {console.log(response);})
+    .catch((error) => {console.log(error);})
 
     {/*MAKE SUER THAT AFTER LOG IN  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
   }

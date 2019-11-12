@@ -18,9 +18,9 @@ class Register extends Component {
           password : `${password}`
         })
     })
-    .then((response) => ({return response.json()}))
-    .then((response) => ())
-    .catch((error) => ())
+    .then((response) => {return response.json();})
+    .then((response) => {console.log(response);})
+    .catch((error) => {console.log(error);})
 
     {/*MAKE SURE THAT AFTER REGISTRATION  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
   }
