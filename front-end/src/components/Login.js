@@ -12,7 +12,7 @@ class Login extends Component {
     fetch("localhost://8081/login", {
       method : 'POST',
       headers : {
-        'Authorization' : 'Bearer ' + {/*THIS.PROPS.JWT*/},
+        'Authorization' : `Bearer ${this.props.jwt}`,
         'Content-Type' : 'application/json'},
       body : JSON.stringify({
         username : `${username}`,
