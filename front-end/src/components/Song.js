@@ -4,20 +4,20 @@ class Song extends Component {
   constructor (props){
     super(props);
 
-    this.MakePost = this.MakePost.bind(this);
+    this.makePost = this.makePost.bind(this);
   }
 
-const makePost = (...args) => {
+makePost = () => {
   e.preventDefault();
-  fetch("localhost://8083/{songId}/makepost", {
+  fetch("localhost://8083/" + this.value + "/makepost", {
     method : 'POST',
     headers : {
       'Authorization' : 'Bearer ' + localStorage.getItem('user'),
       'Content-Type' : 'application/json'},
       body : JSON.stringify({
-        description : `${description}`,
-        username : `${username}`,
-        songId : `${songId}`
+        description : `${description}` {/*USE ID AND INNER TEXT*/},
+        username : `${username}`{/*USE STORED USERNAME*/},
+        songId : `${this.props.songId}`
       })
   })
   .then((response) => {return response.json();})
@@ -31,11 +31,11 @@ const makePost = (...args) => {
 
   render(){
     return (
-      <div>
+      <div className = >
         <h3>Song : {this.props.songProp.title} [{this.props.songProp.songLength} mins]</h3>
         <h4>{this.props.songProp.artist}</h4>
         <textarea value={this.props.songId} onChange={this.handleChange} cols={80} rows={30} />
-        <input onClick={() => MakePost()} type="submit" value="MAKE POST" />
+        <input onClick={() => makePost()} type="submit" value="MAKE POST" />
       </div>
       )
   }
