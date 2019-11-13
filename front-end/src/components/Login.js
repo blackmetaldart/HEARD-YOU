@@ -9,6 +9,10 @@ class Login extends Component {
   }
 
   login = (username, password) => {
+
+    let username = '';
+    let password = '';
+    
     fetch("localhost://8081/login", {
       method : 'POST',
       headers : {
@@ -23,7 +27,6 @@ class Login extends Component {
     .then((response) => {console.log(response);})
     .catch((error) => {console.log(error);})
 
-    {/*MAKE SUER THAT AFTER LOG IN  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
   }
 
   render(){
