@@ -4,9 +4,10 @@ class Song extends Component {
   constructor (props){
     super(props);
 
+    this.MakePost = this.MakePost.bind(this);
   }
 
-makePost = (post, e) => {
+const makePost = (post, e) => {
   e.preventDefault();
   fetch("localhost://8083/{songId}/makepost", {
     method : 'POST',
@@ -34,7 +35,7 @@ makePost = (post, e) => {
         <h3>Song : {this.props.songProp.title} [{this.props.songProp.songLength} mins]</h3>
         <h4>{this.props.songProp.artist}</h4>
         <textarea value={this.props.songId} onChange={this.handleChange} cols={80} rows={30} />
-        <input onClick={() = makePost()} type="submit" value="MAKE POST" />
+        <input onClick={() => MakePost()} type="submit" value="MAKE POST" />
       </div>
       )
   }
