@@ -14,13 +14,14 @@ import {
 } from 'react-router-dom';
 
 import './App.css';
-
+{/*PASS PROP DOWN TO NEEDED*/}
 class App extends Component {
   constructor (props) {
     super(props);
 
     this.state = {
-      token : ''
+      token : '',
+      user : ''
     }
   }
   render(){

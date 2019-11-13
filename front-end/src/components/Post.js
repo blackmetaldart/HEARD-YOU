@@ -4,7 +4,7 @@ class Post extends Component {
   render(){
     return (
       <div>
-        <h3>Post : {this.props.postProp.username} [{this.props.postProp.title} mins]</h3>
+        <h3>{this.props.postProp.title} [{this.props.postProp.username}]</h3>
         <h4>{this.props.postProp.description}</h4>
       </div>
       )

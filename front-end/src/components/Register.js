@@ -7,7 +7,9 @@ class Register extends Component {
     this.register = this.register.bind(this);
   }
 
-  register = (username, password, email) => {
+  register = (e) => {
+    console.log(e);
+    {/*console log e.target and see whats in there*/}
     fetch("localhost://8081/signup", {
       method : 'POST',
       headers : {
