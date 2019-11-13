@@ -17,8 +17,8 @@ public class PostServiceImpl implements PostService {
     PostRepository postRepository;
 
     @Override
-    public Post createPost(String username, Post post) {
-        post.setUsername(username);
+    public Post createPost(Post post, Long songId) {
+        post.setSongId(songId);
         return postRepository.save(post);
     }
 

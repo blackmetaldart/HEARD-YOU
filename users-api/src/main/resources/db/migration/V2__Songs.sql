@@ -17,3 +17,15 @@ INSERT INTO Song (title, songLength, artist) VALUES ('Don’t Call Me Up',5,'Mab
 INSERT INTO Song (title, songLength, artist) VALUES ('See You Again',7,'Mark Ronson');
 INSERT INTO Song (title, songLength, artist) VALUES ('Harder',2,'Jax Jones');
 INSERT INTO Song (title, songLength, artist) VALUES ('Good Thing',7,'Zedd');
+
+INSERT INTO Post (title, description, username, songId) VALUES ('TEST', 'THIS IS A TEST', 'TESTER',  1 );
+INSERT INTO Post (title, description, username, songId) VALUES ('THIS IS ANOTHER TEST', 'THIS IS ANOTHER TEST', 'TESTER', 2 );
+INSERT INTO Post (title, description, username, songId) VALUES ('DIS MA JAM', 'DIS SONG SO COOL', 'ALPHALPHA', 4);
+INSERT INTO Post (title, description, username, songId) VALUES ('I wish I knew a better song!', 'See me out here wishin', 'TIMMYTURNER', 3);
+INSERT INTO Post (title, description, username, songId) VALUES ('FERRY GAD PARINTS!!', 'EEEHH AAAHH OOOHHH', 'Crocker', 15);
+INSERT INTO Post (title, description, username, songId) VALUES ('BOO DIGIMON', 'Yeah, I said it!', 'ASHKETCHUM117', 7);
+INSERT INTO Post (title, description, username, songId) VALUES ('Go Away Ma!!!', 'Or our next trip is to the home..', 'BLANCHE', 17);
+INSERT INTO Post (title, description, username, songId) VALUES ('Not for you.', 'For us', 'CKAEPERNICK7', 3);
+INSERT INTO Post (title, description, username, songId) VALUES ('Not for you.', 'For us', 'BASQUIAT', 8);
+INSERT INTO Post (title, description, username, songId) VALUES ('Not for you.', 'For us', 'BEYONCE', 13);
+INSERT INTO Post (title, description, username, songId) VALUES ('Not for you.', 'for us', 'BRIANFROMAMEX', 6);

@@ -15,9 +15,9 @@ public class PostController {
     @Autowired
     PostService postService;
 
-    @PostMapping("{username}/makepost")
-    public Post createPost(@Valid @RequestBody Post post, @Valid @PathVariable String username){
-        return postService.createPost(username, post);
+    @PostMapping("{songId}/makepost")
+    public Post createPost(@Valid @RequestBody Post post, @Valid @PathVariable Long songId){
+        return postService.createPost(post, songId);
     }
 
     @GetMapping("{songId}/posts")

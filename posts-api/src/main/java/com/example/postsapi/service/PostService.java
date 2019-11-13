@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface PostService {
-    Post createPost(String username, Post post);
+    Post createPost(Post post, Long songId);
     List<Post> getPostsByUsername(String username);
     Post findPostByPostId(Long postId);
     List<Post> findPostBySongId(Long songId);
