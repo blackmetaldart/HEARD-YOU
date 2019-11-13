@@ -9,11 +9,16 @@ class Register extends Component {
 
   register = (e) => {
     console.log(e);
-    {/*console log e.target and see whats in there*/}
+    console.log(e.target.value);
+
+    let email = '';
+    let username = '';
+    let password = '';
+
     fetch("localhost://8081/signup", {
       method : 'POST',
       headers : {
-        'Authorization' : 'Bearer ' + localStorage.getItem('user'),
+        'Authorization' : `Bearer  + ${this.props.jwt}`,
         'Content-Type' : 'application/json'},
         body : JSON.stringify({
           email : `${email}`,
