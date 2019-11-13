@@ -6,21 +6,15 @@ class Filter extends Component {
 
     this.state = {
      jwt: '',
-   }
+    }
   }
 
   render(){
-
-    if (!this.state.jwt) {
-     return (
-       <LoginScreen />
-     );
-   } else if (this.state.jwt) {
-     return (
-       <Profile />
-     );
-   }
-
+        if (!this.state.jwt) {
+           return (<LoginScreen />);
+       } else if (this.state.jwt) {
+           return (<Profile />);
+       }
     }
 }
 
