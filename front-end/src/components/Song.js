@@ -7,7 +7,7 @@ class Song extends Component {
     this.MakePost = this.MakePost.bind(this);
   }
 
-const makePost = (post, e) => {
+const makePost = (...args) => {
   e.preventDefault();
   fetch("localhost://8083/{songId}/makepost", {
     method : 'POST',
