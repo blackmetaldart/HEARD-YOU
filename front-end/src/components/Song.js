@@ -15,8 +15,8 @@ makePost = () => {
       'Authorization' : 'Bearer ' + localStorage.getItem('user'),
       'Content-Type' : 'application/json'},
       body : JSON.stringify({
-        description : `${description}` {/*USE ID AND INNER TEXT*/},
-        username : `${username}`{/*USE STORED USERNAME*/},
+        description : `${description}`, {/* USE ID AND INNER TEXT */}
+        username : `${username}`, {/* USE STORED USERNAME */}
         songId : `${this.props.songId}`
       })
   })
