@@ -11,9 +11,9 @@ class Register extends Component {
     console.log(e);
     console.log(e.target.value);
 
-    let email = '';
-    let username = '';
-    let password = '';
+    let email1 = '';
+    let username1 = '';
+    let password1 = '';
 
     fetch("localhost://8081/signup", {
       method : 'POST',
@@ -21,9 +21,9 @@ class Register extends Component {
         'Authorization' : `Bearer  + ${this.props.jwt}`,
         'Content-Type' : 'application/json'},
         body : JSON.stringify({
-          email : `${email}`,
-          username : `${username}`,
-          password : `${password}`
+          email : `${email1}`,
+          username : `${username1}`,
+          password : `${password1}`
         })
     })
     .then((response) => {return response.json();})

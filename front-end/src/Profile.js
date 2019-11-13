@@ -15,7 +15,7 @@ class Profile extends Component {
 }
 
 componentDidMount() {
-  fetch(`http://localhost:8081/${username}/profile`)
+  fetch(`http://localhost:8081/${this.state.userData.username}/profile`)
   .then(response => {return response.json();})
   .then(response => {
       console.log(response);

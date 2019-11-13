@@ -10,17 +10,17 @@ class Login extends Component {
 
   login = (username, password) => {
 
-    let username = '';
-    let password = '';
-    
+    let username2 = '';
+    let password2 = '';
+
     fetch("localhost://8081/login", {
       method : 'POST',
       headers : {
         'Authorization' : `Bearer ${this.props.jwt}`,
         'Content-Type' : 'application/json'},
       body : JSON.stringify({
-        username : `${username}`,
-        password : `${password}`
+        username : `${username2}`,
+        password : `${password2}`
         })
     })
     .then((response) => {return response.json();})
