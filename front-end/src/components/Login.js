@@ -12,11 +12,11 @@ class Login extends Component {
     e.preventDefault();
     let username = this.refs.username.value;
     let password = this.refs.password.value;
-    this.props.login(username, password);
+    login(username, password);
   }
 
 
-  login(username, password) => {
+  login(username, password) {
     fetch("localhost://8081/login", {
       method : 'POST',
       headers : {
