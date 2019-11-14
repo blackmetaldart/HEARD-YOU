@@ -15,7 +15,7 @@ class Posts extends Component {
 }
 
 componentDidMount() {
-  fetch('http://localhost:8083/list')
+  fetch('http://localhost:8083/posts/list')
   .then(response => {return response.json();})
   .then(response => {
       console.log(response);

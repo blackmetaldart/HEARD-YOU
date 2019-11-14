@@ -8,16 +8,16 @@ class Register extends Component {
   }
 
 handleRegister(e) {
-    e.preventDefault()
+    e.preventDefault();
     let email = this.refs.email.value;
     let username = this.refs.username.value;
     let password = this.refs.password.value;
 
-    this.register(email, username, password);
+    this.props.register(email, username, password);
 }
 
 register( email, username, password) {
-    fetch("http://localhost:8081/app/signup", {
+    fetch("http://localhost:8081/users/signup", {
       method : 'POST',
       headers : {
         'Authorization' : `Bearer  `,

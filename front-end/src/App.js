@@ -21,9 +21,15 @@ class App extends Component {
 
     this.state = {
       token : '',
-      user : []
+      user : [],
+      jwt: null
     }
   }
+
+  register(email, username, password) {
+
+  }
+
   render(){
       return (
         <div className="App">
@@ -39,7 +45,7 @@ class App extends Component {
               <Link to="/songs">Top Songs</Link>{'  '}
               <Link to="/posts">Posts</Link>
             </nav>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Home} /> //Look up how to pass a function in React Router
             <Route path="/main" component={Main} />
             <Route path="/profile" component={Profile} />
             <Route path="/songs" component={Songs} />
