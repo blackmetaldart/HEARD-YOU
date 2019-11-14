@@ -13,7 +13,7 @@ class Register extends Component {
     let username = this.refs.username.value;
     let password = this.refs.password.value;
 
-    this.props.register(email, username, password);
+    this.register(email, username, password);
   }
 
   register( email, username, password) {
@@ -32,7 +32,6 @@ class Register extends Component {
     .then((response) => {console.log(response);})
     .catch((error) => {console.log(error);})
 
-    {/*MAKE SURE THAT AFTER REGISTRATION  THE SCREEN SWITCHES TO THE PROFILE COMPONENT*/}
   }
 
   render(){
