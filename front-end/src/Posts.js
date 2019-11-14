@@ -15,7 +15,12 @@ class Posts extends Component {
 }
 
 componentDidMount() {
-  fetch('http://localhost:8083/posts/list')
+  fetch('http://localhost:8083/posts/list',
+  {
+    method : 'POST',
+    headers : {
+      'Authorization' : `Bearer  `,
+      'Content-Type' : 'application/json'}})
   .then(response => {return response.json();})
   .then(response => {
       console.log(response);

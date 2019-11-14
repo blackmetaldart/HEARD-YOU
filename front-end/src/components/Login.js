@@ -4,8 +4,6 @@ class Login extends Component {
 
   constructor(props) {
     super(props);
-    this.login = this.login.bind(this);
-
   }
 
   handleSignIn(e) {
@@ -15,22 +13,9 @@ class Login extends Component {
     this.login(username, password);
   }
 
-
-  login(username, password) {
-    fetch("http://localhost:8081/login", {
-      method : 'POST',
-      headers : {
-        'Authorization' : `Bearer `,
-        'Content-Type' : 'application/json'},
-      body : JSON.stringify({
-        username : `${username}`,
-        password : `${password}`
-        })
-    })
-    .then((response) => {return response.json();})
-    .then((response) => {console.log(response);})
-    .catch((error) => {console.log(error);})
-  }
+login(username, password) {
+  this.props.login(username, password);
+}
 
   render(){
       return (

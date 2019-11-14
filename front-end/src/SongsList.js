@@ -14,7 +14,11 @@ class SongsList extends Component {
 }
 
 componentDidMount() {
-  fetch('http://localhost:8082/songs/list')
+  fetch('http://localhost:8082/songs/list', {
+    method : 'GET',
+    headers : {
+      'Authorization' : `Bearer  `,
+      'Content-Type' : 'application/json'}})
   .then(response => {return response.json();})
   .then(response => {
       console.log(response);
