@@ -40,13 +40,13 @@ class Register extends Component {
           <h3> Register Here </h3>
             <form onSubmit={this.handleRegister.bind(this)}>
               <label>EMAIL:
-                  <input type="text" name="EMAIL" />
+                  <input ref="email" type="text" name="EMAIL" />
               </label>
               <label>USERNAME:
-                  <input type="text" name="USERNAME" />
+                  <input ref="username" type="text" name="USERNAME" />
               </label>
               <label>PASSWORD:
-                  <input type="text" name="PASSWORD" />
+                  <input ref="password" type="text" name="PASSWORD" />
               </label>
               <input type="submit" value="SUBMIT" />
             </form>
