@@ -16,23 +16,16 @@ class Register extends Component {
     this.props.register(email, username, password);
   }
 
-  register(email, username, password) => {
-    console.log(e);
-    console.log(e.target.value);
-
-    let email1 = '';
-    let username1 = '';
-    let password1 = '';
-
+  register( email, username, password) {
     fetch("localhost://8081/signup", {
       method : 'POST',
       headers : {
         'Authorization' : `Bearer  + ${this.props.jwt}`,
         'Content-Type' : 'application/json'},
         body : JSON.stringify({
-          email : `${email1}`,
-          username : `${username1}`,
-          password : `${password1}`
+          email : `${email}`,
+          username : `${username}`,
+          password : `${password}`
         })
     })
     .then((response) => {return response.json();})
