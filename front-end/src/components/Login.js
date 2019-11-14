@@ -20,7 +20,7 @@ class Login extends Component {
     fetch("http://localhost:8081/login", {
       method : 'POST',
       headers : {
-        'Authorization' : `Bearer ${this.props.jwt}`,
+        'Authorization' : `Bearer `,
         'Content-Type' : 'application/json'},
       body : JSON.stringify({
         username : `${username}`,

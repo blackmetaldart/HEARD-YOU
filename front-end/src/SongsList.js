@@ -14,10 +14,13 @@ class SongsList extends Component {
 }
 
 componentDidMount() {
-  fetch('http://localhost:8082/songs/list')
+  fetch('http://localhost:8082/list')
   .then(response => {return response.json();})
   .then(response => {
       console.log(response);
+      if(response.error){
+        response = false;
+      }
       this.setState({
         songs : response
       });
