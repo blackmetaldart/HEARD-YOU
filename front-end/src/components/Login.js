@@ -12,7 +12,7 @@ class Login extends Component {
     e.preventDefault();
     let username = this.refs.username.value;
     let password = this.refs.password.value;
-    login(username, password);
+    this.login(username, password);
   }
 
 

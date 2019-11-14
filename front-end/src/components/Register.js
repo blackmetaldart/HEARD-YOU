@@ -7,8 +7,16 @@ class Register extends Component {
     this.register = this.register.bind(this);
   }
 
+  handleRegister(e) {
+    e.preventDefault()
+    let email = this.refs.email.value;
+    let username = this.refs.username.value;
+    let password = this.refs.password.value;
 
-  register = (e) => {
+    this.props.register(email, username, password);
+  }
+
+  register(email, username, password) => {
     console.log(e);
     console.log(e.target.value);
 
