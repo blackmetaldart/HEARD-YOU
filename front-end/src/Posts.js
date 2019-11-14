@@ -28,7 +28,6 @@ componentDidMount() {
       })
     })
 
-    {/*MAKE SURE THAT THE COMPONENT HAS A CREATE PROFILE SECTION OR AN UPDATE PROFILE SECTION BASED ON USER DATA INFO*/}
   }
 
   render(){
