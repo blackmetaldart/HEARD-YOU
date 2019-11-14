@@ -9,7 +9,7 @@ class Login extends Component {
   }
 
   handleSignIn(e) {
-    e.preventDefault()
+    e.preventDefault();
     let username = this.refs.username.value;
     let password = this.refs.password.value;
     this.props.login(username, password);
