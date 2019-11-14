@@ -17,7 +17,7 @@ class Register extends Component {
   }
 
   register( email, username, password) {
-    fetch("localhost://8081/signup", {
+    fetch("http://localhost:8081/signup", {
       method : 'POST',
       headers : {
         'Authorization' : `Bearer  + ${this.props.jwt}`,

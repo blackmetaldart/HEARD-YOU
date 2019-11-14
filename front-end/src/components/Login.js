@@ -17,7 +17,7 @@ class Login extends Component {
 
 
   login(username, password) {
-    fetch("localhost://8081/login", {
+    fetch("http://localhost:8081/login", {
       method : 'POST',
       headers : {
         'Authorization' : `Bearer ${this.props.jwt}`,
