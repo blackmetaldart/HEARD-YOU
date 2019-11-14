@@ -10,9 +10,6 @@ class Login extends Component {
 
   login = (username, password) => {
 
-    let username2 = '';
-    let password2 = '';
-
     fetch("localhost://8081/login", {
       method : 'POST',
       headers : {
@@ -33,7 +30,7 @@ class Login extends Component {
       return (
         <div className="login">
             <h3> Log In Here </h3>
-            <form>
+            <form onSubmit={this.handleSignIn.bind(this)>
               <label>
                 USERNAME:
                 <input type="text" ref="username" name="USERNAME" />
@@ -61,13 +58,12 @@ handleSignIn(e) {
   this.props.onSignIn(username, password)
 }
 
-render() {
+
   return (
     <form onSubmit={this.handleSignIn.bind(this)}>
       <h3>Sign in</h3>
-      <input type="text" ref="username" placeholder="enter you username" />
-      <input type="password" ref="password" placeholder="enter password" />
-      <input type="submit" value="Login" />
+
+
     </form>
   )
 }
