@@ -7,6 +7,7 @@ class Register extends Component {
     this.register = this.register.bind(this);
   }
 
+
   register = (e) => {
     console.log(e);
     console.log(e.target.value);
@@ -37,20 +38,17 @@ class Register extends Component {
       return (
         <div className="register">
           <h3> Register Here </h3>
-            <form>
-              <label>
-                EMAIL:
-                <input type="text" name="EMAIL" />
+            <form onSubmit={this.handleRegister.bind(this)}>
+              <label>EMAIL:
+                  <input type="text" name="EMAIL" />
               </label>
-              <label>
-                USERNAME:
-                <input type="text" name="USERNAME" />
+              <label>USERNAME:
+                  <input type="text" name="USERNAME" />
               </label>
-              <label>
-                PASSWORD:
-                <input type="text" name="PASSWORD" />
+              <label>PASSWORD:
+                  <input type="text" name="PASSWORD" />
               </label>
-              <input onClick={() => register()} type="submit" value="SUBMIT" />
+              <input type="submit" value="SUBMIT" />
             </form>
         </div>
       );
