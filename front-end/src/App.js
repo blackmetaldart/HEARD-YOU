@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Main from './Main';
 import Footer from './components/Footer';
 import Home from './Home';
-import Profile from './Profile';
 import Songs from './Songs';
 import Posts from './Posts';
 import Image from './assets/bgImage.jpg';
