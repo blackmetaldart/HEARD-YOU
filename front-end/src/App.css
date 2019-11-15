@@ -33,6 +33,10 @@
   overflow-y: scroll;
 }
 
+.Post {
+  margin : 7vh auto;
+}
+
 .Post h4{
   font-family: "Lucida Console", Monaco, monospace;
 }
