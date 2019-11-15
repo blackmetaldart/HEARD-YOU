@@ -48,7 +48,7 @@ class App extends Component {
           </div>
         </Router>
 
-        <Footer />
+        <Footer className="footer" />
         </div>
       );
     }
