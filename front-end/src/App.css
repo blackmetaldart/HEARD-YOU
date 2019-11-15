@@ -33,6 +33,10 @@
   overflow-y: scroll;
 }
 
+.Post h4{
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
 .Footer {
   position : relative;
   bottom : 0;

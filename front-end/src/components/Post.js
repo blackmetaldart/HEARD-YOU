@@ -10,7 +10,7 @@ class Post extends Component {
     return (
       <div className="Post">
         <h3>{this.props.postProp.title} [{this.props.postProp.username}]</h3>
-        <h4>{this.props.postProp.description}</h4>
+        <p>{this.props.postProp.description}</p>
       </div>
       )
   }
