@@ -39,3 +39,8 @@
   position : relative;
   bottom : 0;
 }
+
+.Songs {
+  height : 80vh;
+  overflow-y: scroll;
+}
