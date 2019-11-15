@@ -21,6 +21,13 @@
   overflow-y: scroll;
 }
 
+.Song {
+  display : flex;
+  flex-direction: column;
+  max-width : 30vw;
+  margin : 5vh auto;
+}
+
 .Posts {
   height : 80vh;
   overflow-y: scroll;
