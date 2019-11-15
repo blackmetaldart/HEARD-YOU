@@ -15,10 +15,7 @@ import {
 
 const styles = {
     bgImage: {
-        backgroundImage: `url(${Image})`,
-        backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat'
+    
     }
 };
 
