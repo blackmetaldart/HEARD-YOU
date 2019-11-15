@@ -15,15 +15,15 @@ import java.util.Collections;
 import java.util.stream.Collectors;
 
 @SpringBootApplication
-@EnableEurekaClient
-@RestController
+//@EnableEurekaClient
+//@RestController
 public class PostsApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PostsApiApplication.class, args);
 	}
 
-	@RequestMapping(value = "/posts")
-	public String home() {
-		return "Eureka Client : Posts application";
-	}
+//	@RequestMapping(value = "/posts")
+//	public String home() {
+//		return "Eureka Client : Posts application";
+//	}
 }

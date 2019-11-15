@@ -1,6 +1,6 @@
 package com.example.postsapi.config;
 
-import com.example.postsapi.config.JwtRequestFilter;
+import com.example.usersapi.config.JwtRequestFilter;
 import com.example.usersapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +21,7 @@ import java.util.Collections;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
     @Autowired
     UserService userService;
 

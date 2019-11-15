@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableEurekaClient
-@RestController
+//@EnableEurekaClient
+//@RestController
 public class SongsApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SongsApiApplication.class, args);
 	}
-	@RequestMapping(value = "/songs")
-	public String home() {
-		return "Eureka Client : Songs application";
-	}
+//	@RequestMapping(value = "/songs")
+//	public String home() {
+//		return "Eureka Client : Songs application";
+//	}
 }
