@@ -39,8 +39,8 @@ componentDidMount() {
         <div className="Posts">
           <h2> The Posts For The Week </h2>
           <div className="postListDiv">
-          {this.state.postData ? (
-            this.state.postData.map((postInfo, key) => {
+          {this.state.postsData ? (
+            this.state.postsData.map((postInfo, key) => {
           return (
           <div className="postDiv">
             <Post key={key} postProp={postInfo}/>
