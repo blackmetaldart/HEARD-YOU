@@ -44,3 +44,9 @@
   height : 80vh;
   overflow-y: scroll;
 }
+
+.Posts {
+  height : 80vh;
+  overflow-y: scroll;
+  background : white;
+}
