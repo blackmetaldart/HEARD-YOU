@@ -7,13 +7,18 @@
   width : 80vw;
   display : flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .routerNav nav a {
   color : black;
   text-decoration: none;
+  font-weight: bold;
+  margin : 0 5vw;
+}
 
+.routerNav nav a:hover {
+  text-decoration: underline;
 }
 
 .Main *{
