@@ -1,12 +1,7 @@
 .App {
   text-align: center;
-
 }
 
-.Header {
-  position : absolute;
-  top : 0;
-}
 .routerNav nav {
   margin : 5vh auto;
   width : 80vw;
@@ -21,16 +16,6 @@
 
 }
 
-.routerNav {
-  background-image: 'url(assets/bgImage.jpg)';
-}
-
-
-.Footer {
-  position : relative;
-  bottom : 0;
-}
-
 .Songs {
   height : 80vh;
   overflow-y: scroll;
@@ -39,4 +24,9 @@
 .Posts {
   height : 80vh;
   overflow-y: scroll;
+}
+
+.Footer {
+  position : relative;
+  bottom : 0;
 }
