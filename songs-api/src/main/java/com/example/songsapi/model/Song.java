@@ -21,7 +21,7 @@ public class Song {
     private String title;
 
     @Column
-    private Long songLength;
+    private Integer songLength;
 
     @Column
     private String artist;
@@ -31,7 +31,7 @@ public class Song {
     public Song() {}
 
     //CONSTRUCTOR FOR THE READ SONGS
-    public Song(String title, Long songLength, String artist) {
+    public Song(String title, Integer songLength, String artist) {
         this.title = title;
         this.songLength = songLength;
         this.artist = artist;
@@ -54,10 +54,10 @@ public class Song {
         this.title = title;
     }
 
-    public Long getSongLength() {
+    public Integer getSongLength() {
         return songLength;
     }
-    public void setSongLength(Long songLength) {
+    public void setSongLength(Integer songLength) {
         this.songLength = songLength;
     }
 
