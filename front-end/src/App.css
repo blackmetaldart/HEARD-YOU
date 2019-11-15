@@ -16,6 +16,10 @@
 
 }
 
+.Main *{
+  margin : 10vh auto;
+}
+
 .Songs {
   height : 80vh;
   overflow-y: scroll;
