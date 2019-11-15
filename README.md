@@ -16,4 +16,5 @@ This is a project that utilizes ReactJs to construct a front-end that accesses t
 I started off this application as a collection of microservices. At first, the idea was complex and involved pre-constructed APIs and concepts that I could not build. After mapping out what needed to be done, I stripped away the complexity of the idea into the simplicity of its services. At the very base of the application there are services that I wanted to implement, so I had to make sure that the microservices could function as microservices before implementing real functionality.
 
 
-
+### USER STORIES
+* [USER STORIES](https://docs.google.com/document/d/1UtNn_l9EfWVTGzlDKhcmqZvGcRKeDEBrqaOsy18OfHw/edit?usp=sharing)
