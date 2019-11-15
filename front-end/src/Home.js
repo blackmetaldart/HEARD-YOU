@@ -5,12 +5,13 @@ import './Home.css';
 class Home extends Component {
   constructor (props) {
     super(props);
+
   }
-  
+
   render(){
       return (
         <div className="Home">
-          <LoginScreen login={this.login} register={this.register}/>
+          <LoginScreen />
         </div>
       );
     }

@@ -14,7 +14,23 @@ class Login extends Component {
   }
 
 login(username, password) {
-  this.props.login(username, password);
+  fetch("http://localhost:8081/users/login", {
+    method : 'POST',
+    headers : {
+      'Authorization' : `Bearer `,
+      'Content-Type' : 'application/json'},
+    body : JSON.stringify({
+      username : `${username}`,
+      password : `${password}`
+      })
+  })
+  .then((response) => {return response.json();})
+  .then((response) => {
+    this.setState({
+      jwt : response
+    })
+    console.log(response);})
+  .catch((error) => {console.log(error);})
 }
 
   render(){

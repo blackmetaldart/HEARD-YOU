@@ -4,6 +4,7 @@ class Register extends Component {
 
   constructor(props){
     super(props);
+    this.register = this.register.bind(this);
   }
 
 handleRegister(e) {
@@ -15,8 +16,21 @@ handleRegister(e) {
     this.register(email, username, password);
 }
 
-register (email, username, password){
-  this.props.register(email, username, password);
+register( email, username, password) {
+    fetch("http://localhost:8081/users/signup", {
+      method : 'POST',
+      headers : {
+        'Authorization' : `Bearer  `,
+        'Content-Type' : 'application/json'},
+        body : JSON.stringify({
+          email : `${email}`,
+          username : `${username}`,
+          password : `${password}`
+        })
+    })
+    .then((response) => {return response.json();})
+    .then((response) => {console.log(response);})
+    .catch((error) => {console.log(error);})
 }
 
 render(){

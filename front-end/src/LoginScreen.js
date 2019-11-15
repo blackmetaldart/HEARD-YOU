@@ -12,7 +12,7 @@ class LoginScreen extends Component {
   constructor (props) {
     super(props);
   }
-  
+
   render(){
       return (
         <div className="LoginScreen">
@@ -22,8 +22,8 @@ class LoginScreen extends Component {
                   <Link to="/register">Register</Link>{'  '}
                   <Link to="/login">Log In</Link>{'  '}
                 </nav>
-                <Route exact path="/register" render={(props) => <Register {...props} register={this.props.register} /> } />
-                <Route path="/login" render={(props) => <Login {...props} login={this.props.login} /> }/>
+                <Route exact path="/register" component={Register}/>
+                <Route path="/login" component={Login}/>
               </div>
             </Router>
         </div>
