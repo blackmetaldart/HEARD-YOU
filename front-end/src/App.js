@@ -6,14 +6,24 @@ import Home from './Home';
 import Profile from './Profile';
 import Songs from './Songs';
 import Posts from './Posts';
-
+import Image from './assets/bgImage.jpg';
+import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
 
-import './App.css';
+const styles = {
+    bgImage: {
+        backgroundImage: `url(${Image})`,
+        backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+    }
+};
+
+
 class App extends Component {
   constructor (props) {
     super(props);
@@ -27,7 +37,7 @@ class App extends Component {
 
   render(){
       return (
-        <div className="App">
+        <div className="App" style={styles.bgImage}>
 
         <Header />
 
@@ -36,13 +46,11 @@ class App extends Component {
             <nav>
               <Link to="/">Home</Link>{'  '}
               <Link to="/main">Main</Link>{'  '}
-              <Link to="/profile">Profile</Link>{'  '}
               <Link to="/songs">Top Songs</Link>{'  '}
               <Link to="/posts">Posts</Link>
             </nav>
             <Route exact path="/" component={Home} />
             <Route path="/main" component={Main} />
-            <Route path="/profile" component={Profile} />
             <Route path="/songs" component={Songs} />
             <Route path="/posts" component={Posts} />
           </div>
