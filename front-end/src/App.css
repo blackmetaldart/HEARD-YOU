@@ -34,3 +34,8 @@
   text-decoration: none;
 
 }
+
+.Footer {
+  position : relative;
+  bottom : 0;
+}
