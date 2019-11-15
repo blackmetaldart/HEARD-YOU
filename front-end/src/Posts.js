@@ -23,9 +23,6 @@ componentDidMount() {
   .then(response => {return response.json();})
   .then(response => {
       console.log(response);
-      if(response.error){
-        response = false;
-      }
       this.setState({
         postsData : response
       });
@@ -42,7 +39,8 @@ componentDidMount() {
         <div className="Posts">
           <h2> The Posts For The Week </h2>
           <div className="postListDiv">
-          {this.state.postData ? (this.state.postData.map((postInfo, key) => {
+          {this.state.postData ? (
+            this.state.postData.map((postInfo, key) => {
           return (
           <div className="postDiv">
             <Post key={key} postProp={postInfo}/>
