@@ -23,6 +23,9 @@ componentDidMount() {
   .then(response => {return response.json();})
   .then(response => {
       console.log(response);
+      if(response.error){
+        response = false;
+      }
       this.setState({
         postsData : response
       });

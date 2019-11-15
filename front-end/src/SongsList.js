@@ -14,7 +14,8 @@ class SongsList extends Component {
 }
 
 componentDidMount() {
-  fetch('http://localhost:8082/songs/list', {
+  fetch('http://localhost:8082/songs/list',
+  {
     method : 'GET',
     headers : {
       'Authorization' : `Bearer  `,
