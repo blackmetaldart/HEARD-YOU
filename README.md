@@ -5,7 +5,7 @@ This is a project that utilizes ReactJs to construct a front-end that accesses t
 
 
 ### TECHNOLOGIES USED
-* [INTELLIJ](https://www.jetbrains.com/idea/) - An IDE used for the Java
+* [INTELLIJ](https://www.jetbrains.com/idea/) - An IDE used to develop the Java back-end application
 * [POSTGRESQL](https://www.postgresql.org) An object-relational database system used with SQL
 * [MAVEN](https://maven.apache.org/) - Dependency Management 
 * [ATOM](https://atom.io) - A cool text editor used to write the ReactJs files.
