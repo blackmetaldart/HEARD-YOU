@@ -1,6 +1,7 @@
 # PROJECT-III
 ### A SONG-BASED CHAT APPLICATION USING A REACTJS FRONT-END AND A JAVA/SPRING BOOT BACK-END
 
+### DESCRIPTION
 This is a project that utilizes ReactJs to construct a front-end that accesses the functionality provided by an API that offers blog-like functionality. Users can make sign-up and view the top songs and view posts created by other users.
 
 
