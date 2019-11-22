@@ -12,6 +12,25 @@ handleMakePost(e) {
   this.makePost(textarea);
 }
 
+makePost(texarea) {
+  fetch("http://localhost:8080/makePost", {
+    method : 'POST',
+    headers : {
+      'Authorization' : `Bearer `,
+      'Content-Type' : 'application/json'},
+    body : JSON.stringify({
+      text : `${textarea}`
+      })
+  })
+  .then((response) => {return response.json();})
+  .then((response) => {
+    this.setState({
+      jwt : response
+    })
+    console.log(response);})
+  .catch((error) => {console.log(error);})
+}
+
   render(){
     return (
       <div className="Song">
