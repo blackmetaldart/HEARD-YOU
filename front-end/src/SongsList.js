@@ -22,7 +22,6 @@ componentDidMount() {
       'Content-Type' : 'application/json'}})
   .then(response => {return response.json();})
   .then(response => {
-      console.log(response);
       this.setState({
         songs : response
       });
