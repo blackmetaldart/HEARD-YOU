@@ -24,7 +24,7 @@ makePost(id, texarea) {
     body : JSON.stringify({
       title : `${title}`,
       text : `${textarea}`,
-      songId : id
+      songId : `${id}`
       })
   })
   .then((response) => {return response.json();})
