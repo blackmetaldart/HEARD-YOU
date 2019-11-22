@@ -16,7 +16,7 @@ handleMakePost(e) {
 }
 
 makePost(id, title, texarea) {
-  fetch(`http://localhost:8083/${id}/makePost`, {
+  fetch(`http://localhost:8083/${id}/makepost`, {
     method : 'POST',
     headers : {
       'Authorization' : `Bearer `,
