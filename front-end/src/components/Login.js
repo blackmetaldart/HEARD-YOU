@@ -29,7 +29,7 @@ login(username, password) {
     this.setState({
       jwt : response
     })
-    console.log(response);})
+    })
   .catch((error) => {console.log(error);})
 }
 
