@@ -9,17 +9,22 @@ class Song extends Component {
 handleMakePost(e) {
   e.preventDefault();
   let textarea = this.refs.textarea.value;
-  this.makePost(textarea);
+  let id = this.props.songProp.id;
+  let title = this.props.songProp.title;
+
+  this.makePost(id, title, textarea);
 }
 
-makePost(texarea) {
-  fetch("http://localhost:8080/makePost", {
+makePost(id, texarea) {
+  fetch(`http://localhost:8083/${id}/makePost`, {
     method : 'POST',
     headers : {
       'Authorization' : `Bearer `,
       'Content-Type' : 'application/json'},
     body : JSON.stringify({
-      text : `${textarea}`
+      title : `${title}`,
+      text : `${textarea}`,
+      songId : id
       })
   })
   .then((response) => {return response.json();})
