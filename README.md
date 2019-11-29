@@ -1,9 +1,6 @@
 # HEARD-YOU
-### A SONG-BASED CHAT APPLICATION USING A REACTJS FRONT-END AND A JAVA/SPRING BOOT BACK-END
 
-### DESCRIPTION
-This is a project that utilizes ReactJs to construct a front-end that accesses the functionality provided by an API that offers blog-like functionality. Users can make sign-up and view the top songs and view posts created by other users.
-
+### A FULL-STACK APPLICATION THAT USES REACTJS ON THE CLIENT-SIDE AND JAVA, THE SPRING FRAMEWORK AND POSTGRESQL ON THE SERVER-SIDE. THIS PROJECT WAS DEPLOYED USING DOCKER AND AMAZON WEB SERVICES.
 
 ### TECHNOLOGIES USED
 * [INTELLIJ](https://www.jetbrains.com/idea/) - An IDE used to develop the Java back-end application
