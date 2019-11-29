@@ -13,7 +13,7 @@ This is a project that utilizes ReactJs to construct a front-end that accesses t
 * [POSTMAN](https://www.getpostman.com) - A platform for testing and developing APIs
 * [REACTJS](https://reactjs.org/) - A JavaScript library for building user interfaces
 * [DOCKER](https://www.docker.com/) - A container platform to build, manage and secure traditional applications and microservices
-* [AWS](https://aws.amazon.com/?nc2=h_lg) - DEPLOYMENT
+* [AWS](https://aws.amazon.com/?nc2=h_lg) - Deployment
 ### APPROACH TAKEN
 I started off this application as a collection of microservices. At first, the idea was complex and involved pre-constructed APIs and concepts that I could not build. After mapping out what needed to be done, I stripped away the complexity of the idea into the simplicity of its services. At the very base of the application there are services that I wanted to implement, so I had to make sure that the microservices could function as microservices before implementing real functionality.
 
