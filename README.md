@@ -18,7 +18,7 @@ This is a project that utilizes ReactJs to construct a front-end that accesses t
 I started off this application as a collection of microservices. At first, the idea was complex and involved pre-constructed APIs and concepts that I could not build. After mapping out what needed to be done, I stripped away the complexity of the idea into the simplicity of its services. At the very base of the application there are services that I wanted to implement, so I had to make sure that the microservices could function as microservices before implementing real functionality.
 
 ### MAJOR HURDLES
-The major hurdle for me was creating microservices without reference to a monolith. I had to learn how to use Docker and ReactJs. I wasn't sure if anything would work, but I knew what I wanted to make work. The learning opportunity with this was whether or not my assumptions about what makes a functional microservice was correct. 
+The major hurdle for me was creating microservices without reference to a monolith. I had to learn how to use Docker and ReactJs. I wasn't sure if anything would work, but I knew what I wanted to make work. The learning opportunity with this was whether or not my assumptions about what makes a functional microservice were correct. 
 
 ### RECOMMENDED USER STORIES
 * AS AN ADMIN I WANT TO UPDATE THE SONG LIST SO THAT USERS ARE ENGAGING WITH NEW CONTENT
