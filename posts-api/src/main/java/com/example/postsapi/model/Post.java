@@ -24,11 +24,10 @@ public class Post {
     @Column
     private Long songId;
 
-    //EMPTY CONSTRUCTOR FOR THE POSTS
+    // EMPTY CONSTRUCTOR FOR THE POSTS
     public Post(){}
 
-    //GETTERS AND SETTERS FOR THE POST DATA
-
+    // GETTERS AND SETTERS FOR THE POST DATA
     public Long getId() {return id;}
     public void setId(Long id) {this.id = id; }
 
