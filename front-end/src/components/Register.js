@@ -17,7 +17,7 @@ handleRegister(e) {
 }
 
 register( email, username, password) {
-    fetch("http://3.95.190.64:8081/users/signup", {
+    fetch("http://localhost:8081/users/signup", {
       method : 'POST',
       headers : {
         'Authorization' : `Bearer  `,
