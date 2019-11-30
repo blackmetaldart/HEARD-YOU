@@ -14,7 +14,7 @@ class SongsList extends Component {
 }
 
 componentDidMount() {
-  fetch('http://3.95.190.64:8082/songs/list',
+  fetch('http://localhost:8082/songs/list',
   {
     method : 'GET',
     headers : {
