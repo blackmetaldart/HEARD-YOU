@@ -18,25 +18,25 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    //ENDPOINT THAT ALLOWS A USER TO SIGN UP / REFER TO USER SERVICE
+    // ENDPOINT THAT ALLOWS A USER TO SIGN UP / REFER TO USER SERVICE
     @PostMapping("/signup")
     public ResponseEntity<?> createUser(@Valid @RequestBody User newUser) {
         return ResponseEntity.ok(new JwtResponse(userService.createUser(newUser)));
     }
 
-    //ENDPOINT THAT ALLOWS A USER TO LOG IN / REFER TO USER SERVICE
+    // ENDPOINT THAT ALLOWS A USER TO LOG IN / REFER TO USER SERVICE
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody User user) {
         return ResponseEntity.ok(new JwtResponse(userService.login(user)));
     }
 
+    // ENDPOINT FOR GETTING THE USERS PROFILE
     @GetMapping("/{username}/profile")
     public User getUserProfile (@PathVariable String username){
         return userService.getUser(username);
     }
 
-    //ENDPOINT THAT SHOWS A USER LIST / REFER TO USER SERVICE
-
+    // ENDPOINT FOR LOG OUT FUNCTION
     @GetMapping("/logout")
     public String helloWorld4() {
         return "Hello World!! You just logged out!";
