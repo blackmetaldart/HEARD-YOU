@@ -14,7 +14,7 @@ class Posts extends Component {
 }
 
 componentDidMount() {
-  fetch('http://3.95.190.64:8083/posts/list',
+  fetch('http://localhost:8083/posts/list',
   {
     method : 'GET',
     headers : {
