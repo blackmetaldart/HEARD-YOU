@@ -14,7 +14,7 @@ class Login extends Component {
   }
 
 login(username, password) {
-  fetch("http://3.95.190.64:8081/users/login", {
+  fetch("http://localhost:8081/users/login", {
     method : 'POST',
     headers : {
       'Authorization' : `Bearer `,
