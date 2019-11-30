@@ -26,7 +26,6 @@ public class Song {
     @Column
     private String artist;
 
-    //CONSTRUCTORS FOR THE SONG MODELS
     //EMPTY SONG CONSTRUCTOR
     public Song() {}
 
@@ -38,7 +37,6 @@ public class Song {
     }
 
     //GETTERS AND SETTERS FOR THE COLUMNS
-
     public Long getId() {
         return id;
     }
