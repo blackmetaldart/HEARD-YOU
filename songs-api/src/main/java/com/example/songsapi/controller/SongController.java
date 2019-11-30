@@ -13,6 +13,7 @@ public class SongController {
     @Autowired
     SongService songService;
 
+    // ENDPOINT THAT RETURNS A LIST OF THE SONGS
     @GetMapping("/list")
     public Iterable<Song> listSongs() {
         return songService.listSongs();
