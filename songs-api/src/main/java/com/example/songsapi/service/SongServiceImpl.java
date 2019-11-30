@@ -10,6 +10,7 @@ public class SongServiceImpl implements SongService {
     @Autowired
     SongRepository songRepository;
 
+    // RETURNS A LIST OF ALL THE SONGS IN THE REPOSITORY
     @Override
     public Iterable<Song> listSongs() {
         return songRepository.findAll();
