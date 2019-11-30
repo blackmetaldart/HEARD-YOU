@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-    // ID / FIRSTNAME / LASTNAME / EMAIL / USERNAME / PASSWORD COLUMNS FOR TABLE
+    // ID / FIRSTNAME / LASTNAME / EMAIL / USERNAME / PASSWORD / USERROLE COLUMNS FOR TABLE
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +40,6 @@ public class User {
     public User(){}
 
     //THE GETTERS AND SETTERS FOR THE USER MODEL DATE
-
     public Long getId() {return id;}
     public void setId(Long id) {this.id = id;}
 
