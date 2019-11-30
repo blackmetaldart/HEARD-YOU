@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    // RETURNS A TOKEN FOR THE USER INFO
     @Override
     public String login(User user){
         User newUser = userRepository.findByUsername(user.getUsername());
@@ -50,6 +51,7 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    // RETURNS USER DETAILS OF THE USERNAME PROVIDED
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = getUser(username);
@@ -61,11 +63,13 @@ public class UserServiceImpl implements UserService {
                 true, true, true, true, new ArrayList<>());
     }
 
+    // RETURNS A USER WITH THE USERNAME PROVIDED
     @Override
     public User getUser(String username) {
         return userRepository.findByUsername(username);
     }
 
+    // NULL LOGOUT FUNCTION / STRING RETURN
     @Override
     public String logout() {
         return null;
