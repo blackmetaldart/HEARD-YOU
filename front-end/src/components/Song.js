@@ -15,7 +15,7 @@ handleMakePost(e) {
   this.makePost(id, title, textarea);
 }
 
-makePost(id, title, texarea) {
+makePost(id, title, textarea) {
   fetch(`http://localhost:8083/${id}/makepost`, {
     method : 'POST',
     headers : {
