@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Login from './forms/Login';
 import Register from './forms/Register';
 
