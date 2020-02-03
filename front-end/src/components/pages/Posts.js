@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Post from './Post.js';
+import Post from './functional/Post.js';
 
 class Posts extends Component {
   constructor(props) {
