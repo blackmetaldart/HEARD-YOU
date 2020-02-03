@@ -18,4 +18,6 @@ public class SongController {
     public Iterable<Song> listSongs() {
         return songService.listSongs();
     }
+
+    @PostMapping("createSong")
 }
