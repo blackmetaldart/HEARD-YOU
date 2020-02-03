@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from './components/layout/Header';
-import Main from './components/pages/Main';
+import About from './components/pages/Main';
 import Footer from './components/layout/Footer';
 import Home from './components/pages/Home';
 import Songs from './components/pages/Songs';
@@ -33,12 +33,12 @@ class App extends Component {
           <div className="routerNav">
             <nav>
               <Link to="/">Home</Link>{'  '}
-              <Link to="/main">Main</Link>{'  '}
+              <Link to="/about">About</Link>{'  '}
               <Link to="/songs">Top Songs</Link>{'  '}
               <Link to="/posts">Posts</Link>
             </nav>
             <Route exact path="/" component={Home} />
-            <Route path="/main" component={Main} />
+            <Route path="/about" component={About} />
             <Route path="/songs" component={Songs} />
             <Route path="/posts" component={Posts} />
           </div>
