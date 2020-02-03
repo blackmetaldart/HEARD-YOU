@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Header from './components/Header';
-import Main from './Main';
+import Main from './components/pages/Main';
 import Footer from './components/Footer';
-import Home from './Home';
-import Songs from './Songs';
-import Posts from './Posts';
+import Home from './components/pages/Home';
+import Songs from './components/pages/Songs';
+import Posts from './components/pages/Posts';
 import Image from './assets/bgImage.jpg';
 import './App.css';
 import {
@@ -15,7 +15,7 @@ import {
 
 const styles = {
     bgImage: {
-    
+
     }
 };
 
