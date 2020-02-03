@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-function Main(props) {
+function Main() {
       return (
         <div className="Main">
           <h2> Main Page </h2>
@@ -8,7 +8,7 @@ function Main(props) {
           <p>Join our community and chat with friends and fans alike about hits from your favorite artists.</p>
         </div>
       );
-    
+
 }
 
 export default Main;
