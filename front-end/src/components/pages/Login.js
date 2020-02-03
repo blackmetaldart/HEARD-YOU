@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 class Login extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -33,18 +32,33 @@ login(username, password) {
   .catch((error) => {console.log(error);})
 }
 
+
+
   render(){
+    const formStyle = {
+      display : 'flex',
+      flexDirection : 'column',
+      maxWidth : '30vw',
+      margin : '0 auto'
+    }
+
+    const subStyle = {
+      maxWidth : '10vw',
+      margin : '5vh auto'
+    }
+
       return (
         <div className="login">
             <h3> Log In Here </h3>
-            <form onSubmit={this.handleSignIn.bind(this)}>
-              <label>USERNAME:
+            <form style={formStyle} onSubmit={this.handleSignIn.bind(this)}>
+              <label>USERNAME : {' '}
                   <input type="text" ref="username" name="USERNAME" />
               </label>
-              <label>PASSWORD:
+              {' '}
+              <label>PASSWORD : {' '}
                   <input type="text" ref="password" name="PASSWORD" />
               </label>
-              <input type="submit" value="LOGIN" />
+              <input style={subStyle}  type="submit" value="LOGIN" />
             </form>
         </div>
       );

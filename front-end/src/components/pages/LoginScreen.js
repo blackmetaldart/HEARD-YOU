@@ -8,12 +8,8 @@ import {
   Link
 } from 'react-router-dom';
 
-class LoginScreen extends Component {
-  constructor (props) {
-    super(props);
-  }
+function LoginScreen(props) {
 
-  render(){
       return (
         <div className="LoginScreen">
             <Router>
@@ -28,7 +24,6 @@ class LoginScreen extends Component {
             </Router>
         </div>
       );
-    }
 }
 
 export default LoginScreen;
