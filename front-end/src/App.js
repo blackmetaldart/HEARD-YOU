@@ -5,20 +5,12 @@ import Footer from './components/layout/Footer';
 import Home from './components/pages/Home';
 import Songs from './components/pages/Songs';
 import Posts from './components/pages/Posts';
-import Image from './assets/bgImage.jpg';
 import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
-
-const styles = {
-    bgImage: {
-
-    }
-}
-
 
 class App extends Component {
   constructor (props) {
@@ -33,7 +25,7 @@ class App extends Component {
 
   render(){
       return (
-        <div className="App" style={styles.bgImage}>
+        <div className="App">
 
         <Header />
 
