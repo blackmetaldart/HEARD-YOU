@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Login from './Login';
-import Register from './Register';
+import Login from './forms/Login';
+import Register from './forms/Register';
 
 import {
   BrowserRouter as Router,

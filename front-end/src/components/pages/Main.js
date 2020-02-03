@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
-class Main extends Component {
-  render(){
+function Main(props) {
       return (
         <div className="Main">
           <h2> Main Page </h2>
@@ -9,7 +8,7 @@ class Main extends Component {
           <p>Join our community and chat with friends and fans alike about hits from your favorite artists.</p>
         </div>
       );
-    }
+    
 }
 
 export default Main;
