@@ -17,7 +17,7 @@ const styles = {
     bgImage: {
 
     }
-};
+}
 
 
 class App extends Component {
